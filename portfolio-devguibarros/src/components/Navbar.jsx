@@ -1,25 +1,33 @@
+import { useState } from "react"
+import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5";
+import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut } from "react-icons/fa6";
 import styles from "./Navbar.module.css"
 import ImgLogo from "../img/logo.png"
 import ImgDayNight from "../img/dia-e-noite.png"
-import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5";
-import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut } from "react-icons/fa6";
+
 
 
 export default function Navbar(){
+    
+    const [hideNavbar, setHideNavbar] = useState("false")
+    
+    const toggleClasse = () => {
+        setHideNavbar(!hideNavbar)
+    }
     return(
         <div className={styles.navbarContainer}>
             <div className={styles.headerMenu}>
-                <button>
+                <button onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
-                <a href="">
+                <a href="#">
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                 </a>
                 <button>
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
             </div>
-            <nav className={styles.navContainer}>
+            <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
                 <ul>
                     <li>
                         <FaUserAstronaut />
