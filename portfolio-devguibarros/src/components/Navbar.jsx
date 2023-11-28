@@ -30,29 +30,39 @@ export default function Navbar(){
             <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
                 <ul>
                     <li>
-                        <FaUserAstronaut />
-                        <a href="#">Sobre mim</a>
-                        <IoChevronForward/>
+                        <a href="#">
+                            <FaUserAstronaut />
+                            Sobre mim
+                            <IoChevronForward/>
+                        </a>
                     </li>
                     <li>
-                        <FaGears />
-                        <a href="#">Hard Skill</a>
-                        <IoChevronForward/>
+                        <a href="#">
+                            <FaGears />
+                            Hard Skill
+                            <IoChevronForward/>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#">
+                            <FaUsers/>
+                            Soft Skill
+                            <IoChevronForward/>
+                        </a>
                     </li>
                     <li>
-                        <FaUsers/>
-                       <a href="#">Soft Skill</a>
-                       <IoChevronForward/> 
+                        <a href="#">
+                            <IoDesktopOutline/>
+                            Projetos
+                            <IoChevronForward/>
+                        </a> 
                     </li>
-                    <li>
-                        <IoDesktopOutline/>
-                        <a href="#">Projetos</a>
-                        <IoChevronForward/>
-                    </li>
-                    <li>
-                        <FaAddressBook/>
-                        <a href="#">Contatos</a>
-                        <IoChevronForward/>
+                    <li> 
+                        <a href="#">
+                            <FaAddressBook/>
+                            Contatos
+                            <IoChevronForward/>
+                        </a> 
                     </li>
                 </ul>
             </nav>
