@@ -7,13 +7,15 @@ import { IoMenu } from "react-icons/io5";
 export default function Navbar(){
     return(
         <div className={styles.navbarContainer}>
-            <div>
+            <div className={styles.headerMenu}>
                 <button>
                     <IoMenu/>
                 </button>
-                <img src={ImgLogo} alt="Logo"/>
+                <a href="">
+                    <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
+                </a>
                 <button>
-                    <img src={ImgDayNight} alt=""/>
+                    <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
             </div>
             <nav>

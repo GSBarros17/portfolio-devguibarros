@@ -1,0 +1,34 @@
+.navbarContainer{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+}
+
+.headerMenu{
+    width: 100%;
+    height: 70px;
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em;
+}
+
+.headerMenu button{
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #f9f9f9;
+    padding: 0;
+    margin: 16px;
+}
+
+.imgButton{
+    width: 30px;
+}
+
+.imgLogo{
+    width: 60px;
+    padding: 0.5em;
+}
