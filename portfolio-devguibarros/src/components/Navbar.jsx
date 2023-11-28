@@ -18,13 +18,23 @@ export default function Navbar(){
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
             </div>
-            <nav>
+            <nav className={styles.navContainer}>
                 <ul>
-                    <li>Sobre mim</li>
-                    <li>Hard skill</li>
-                    <li>Soft skill</li>
-                    <li>Projetos</li>
-                    <li>Contatos</li>
+                    <li>
+                        <a href="#">Sobre mim</a>
+                    </li>
+                    <li>
+                        <a href="#">Hard Skill</a>
+                    </li>
+                    <li>
+                       <a href="#">Soft Skill</a> 
+                    </li>
+                    <li>
+                        <a href="#">Projetos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contatos</a>
+                    </li>
                 </ul>
             </nav>
         </div>
