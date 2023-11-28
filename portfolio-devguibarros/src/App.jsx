@@ -1,9 +1,10 @@
 import './App.css'
+import Home from "./page/Home/Home"
 
 export default function App() {
   return (
     <div>
-      <h1>olá</h1>
+      <Home/>
     </div>
   )
 }
