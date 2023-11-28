@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5";
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut } from "react-icons/fa6";
 import styles from "./Navbar.module.css"
@@ -20,9 +21,9 @@ export default function Navbar(){
                 <button onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
-                <a href="#">
+                <Link to="/">
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
-                </a>
+                </Link>   
                 <button>
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
