@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
 import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5";
-import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut } from "react-icons/fa6";
+import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6";
 import styles from "./Navbar.module.css"
 import ImgLogo from "../img/logo.png"
 import ImgDayNight from "../img/dia-e-noite.png"
@@ -64,6 +64,13 @@ export default function Navbar(){
                             Contatos
                             <IoChevronForward/>
                         </a> 
+                    </li>
+                    <li> 
+                        <Link to="/login">
+                            <FaUserLock/>
+                            Acesso Admin
+                            <IoChevronForward/>
+                        </Link>
                     </li>
                 </ul>
             </nav>

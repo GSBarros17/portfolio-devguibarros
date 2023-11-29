@@ -1,1 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+    font-family: 'Work Sans', sans-serif;
+}
 
+h1, h2, h3, h4{
+    font-family: 'Russo One', sans-serif;
+}
