@@ -3,6 +3,8 @@ import { FaWhatsapp, FaInstagram, FaLinkedin} from "react-icons/fa6";
 import ImgLogo from "../img/logo-nomelateral.png"
 
 export default function Footer(){
+    const anoAtual = new Date().getFullYear()
+    
     return(
         <div className={styles.footerContainer}>
             <img src={ImgLogo} alt="Logo"/>
@@ -11,7 +13,7 @@ export default function Footer(){
                 <a aria-label="icone instagram" href="https://www.instagram.com/devgbarros/"><FaInstagram/></a>
                 <a aria-label="icone linkedin" href="https://www.linkedin.com/in/guilherme-barros-b05632294"><FaLinkedin/></a>
             </div>
-            <p>Copyright ©️ 2023 DevGuilhermeBarros</p>
+            <p>Copyright ©️ <span>{anoAtual}</span> DevGuilhermeBarros</p>
         </div>
     )
 }
