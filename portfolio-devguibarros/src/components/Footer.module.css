@@ -20,9 +20,10 @@
 .socialMedia a{
     text-decoration: none;
     color: inherit;
+    font-size: 1.2em;
     margin: 0 8px;
 }
 
 .footerContainer p{
-    margin: 8px 0 16px 0;
+    margin: 0 0 16px 0;
 }
