@@ -15,13 +15,18 @@ export default function Navbar(){
     const toggleClasse = () => {
         setHideNavbar(!hideNavbar)
     }
+
+    const handleClickLink = () =>{
+        setHideNavbar(true)
+    }
+
     return(
         <div className={styles.navbarContainer}>
             <div className={styles.headerMenu}>
                 <button onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
-                <Link to="/">
+                <Link to="/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                 </Link>   
                 <button>
@@ -31,42 +36,42 @@ export default function Navbar(){
             <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="#" onClick={handleClickLink}>
                             <FaUserAstronaut />
                             Sobre mim
                             <IoChevronForward/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onClick={handleClickLink}>
                             <FaGears />
                             Hard Skill
                             <IoChevronForward/>
                         </a> 
                     </li>
                     <li> 
-                        <a href="#">
+                        <a href="#" onClick={handleClickLink}>
                             <FaUsers/>
                             Soft Skill
                             <IoChevronForward/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onClick={handleClickLink}>
                             <IoDesktopOutline/>
                             Projetos
                             <IoChevronForward/>
                         </a> 
                     </li>
                     <li> 
-                        <a href="#">
+                        <a href="#" onClick={handleClickLink}>
                             <FaAddressBook/>
                             Contatos
                             <IoChevronForward/>
                         </a> 
                     </li>
                     <li> 
-                        <Link to="/login">
+                        <Link to="/login" onClick={handleClickLink}>
                             <FaUserLock/>
                             Acesso Admin
                             <IoChevronForward/>
