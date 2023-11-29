@@ -7,9 +7,9 @@ export default function Footer(){
         <div className={styles.footerContainer}>
             <img src={ImgLogo} alt="Logo"/>
             <div className={styles.socialMedia}>
-                <a href="#"><FaWhatsapp/></a>
-                <a href="#"><FaInstagram/></a>
-                <a href="#"><FaLinkedin/></a>
+                <a aria-label="icone whatsapp" href="https://wa.me/5561999767446"><FaWhatsapp/></a>
+                <a aria-label="icone instagram" href="https://www.instagram.com/devgbarros/"><FaInstagram/></a>
+                <a aria-label="icone linkedin" href="https://www.linkedin.com/in/guilherme-barros-b05632294"><FaLinkedin/></a>
             </div>
             <p>Copyright ©️ 2023 DevGuilhermeBarros</p>
         </div>
