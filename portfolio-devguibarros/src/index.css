@@ -1,8 +1,14 @@
-body {
+.bodyContainer {
     margin: 0;
     padding: 0;
     background-color: #272727;
+    color: #f9f9f9;
     font-family: 'Work Sans', sans-serif;
+}
+
+.modeLight {
+    background-color: #f9f9f9;
+    color: #171717;
 }
 
 h1, h2, h3, h4{
