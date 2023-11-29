@@ -6,9 +6,9 @@ export default function Footer(){
         <div className={styles.footerContainer}>
             <img src={ImgLogo} alt="Logo"/>
             <div className={styles.socialMedia}>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#">whats</a>
+                <a href="#">insta</a>
+                <a href="#">link</a>
             </div>
             <p>Copyright ©️ DevGuilhermeBarros</p>
         </div>
