@@ -13,7 +13,7 @@ export default function Footer(){
                 <a aria-label="icone instagram" href="https://www.instagram.com/devgbarros/"><FaInstagram/></a>
                 <a aria-label="icone linkedin" href="https://www.linkedin.com/in/guilherme-barros-b05632294"><FaLinkedin/></a>
             </div>
-            <p>Copyright ©️ <span>{anoAtual}</span> DevGuilhermeBarros</p>
+            <p>Copyright ©️ {anoAtual} DevGuilhermeBarros</p>
         </div>
     )
 }
