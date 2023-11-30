@@ -1,10 +1,57 @@
-body {
+body{
     margin: 0;
     padding: 0;
+    background-color: #272727;
+    color: #f9f9f9;
     font-family: 'Work Sans', sans-serif;
 }
 
 
 h1, h2, h3, h4{
     font-family: 'Russo One', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Work Sans', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form{
+  width: 70%;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 10px 2px #3EB6DE,0px 0px 0px 4px #ffffff,0px 0px 20px 2px #3EB6DE;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+label span{
+  color: #f9f9f9;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.2em;
+}
+
+input{
+  background-color: #f9f9f9;
+  opacity: 0.2;
+  border: none;
+  border-radius: 25px;
+  padding: 1em 0.5em;
+  transition: 0.5s;
+}
+
+input:focus{
+  opacity: 1;
 }

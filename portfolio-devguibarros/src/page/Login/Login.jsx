@@ -12,9 +12,9 @@ export default function Login(){
     
     return (
         <div className={styles.loginContainer}>
-            <h1>Login</h1> 
+            <h1>LOGIN</h1> 
             <form onSubmit={handleSubmit}>
-                <h2>Área de login Admin</h2>
+                <h3>ÁREA DE LOGIN ADIM</h3>
                 <label>
                     <span>E-mail:</span>
                     <input 
