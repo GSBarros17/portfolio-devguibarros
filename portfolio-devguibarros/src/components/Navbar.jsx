@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { Link } from "react-router-dom";
-import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5";
-import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6";
+import { Link } from "react-router-dom"
+import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5"
+import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import styles from "./Navbar.module.css"
 import ImgLogo from "../img/logo.png"
 import ImgDayNight from "../img/dia-e-noite.png"
@@ -11,7 +11,7 @@ import ImgDayNight from "../img/dia-e-noite.png"
 export default function Navbar(){
     
     const [hideNavbar, setHideNavbar] = useState("false")
-    
+
     const toggleClasse = () => {
         setHideNavbar(!hideNavbar)
     }
