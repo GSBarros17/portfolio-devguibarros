@@ -1,30 +1,31 @@
 import {
     getAuth,
     signInWithEmailAndPassword,
-    singOut
+    signOut
 } from "firebase/auth"
+import { app } from "../firebase/config"
 import { useState, useEffect } from "react"
 
 export default function useAuthentication(){
     const[error, setError] = useState(null)
     const[loading, setLoading] = useState(null)
     const[cancelled, setCancelled] = useState(false)
-    const auth = getAuth()
-
+    const auth = getAuth(app)
+   
     function checkIfIsCancelled(){
         if(cancelled){
             return
         }
     }
 
-    const login = async(data) =>{
+    const login = async(email , senha) =>{
         
         checkIfIsCancelled()
 
         setLoading(true)
         setError(false)
         try {
-            await signInWithEmailAndPassword(auth, data.email, data.password)
+            await signInWithEmailAndPassword(auth, email, senha)
             setLoading(true)
         } catch (error) {
             let systemErrorMessage
@@ -39,7 +40,7 @@ export default function useAuthentication(){
     const logout = () => {
         checkIfIsCancelled()
 
-        singOut(auth)
+        signOut(auth)
     }
 
     useEffect(() => {
