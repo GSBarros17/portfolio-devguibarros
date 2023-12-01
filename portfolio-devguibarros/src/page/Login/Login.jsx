@@ -5,6 +5,7 @@ export default function Login(){
     
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    console.log(email, password)
 
     function handleSubmit(e){
         e.preventDefault()
@@ -34,7 +35,8 @@ export default function Login(){
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                </label> 
+                </label>
+                <button type="submit" className="btnForm">Entrar</button>
             </form>
         </div>
     )
