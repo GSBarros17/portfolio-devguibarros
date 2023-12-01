@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { IoMenu, IoChevronForward, IoDesktopOutline, IoLogOutSharp } from "react-icons/io5"
+import { IoMenu, IoChevronForward, IoDesktopOutline, IoLogOutSharp, IoAddCircle, IoTerminal } from "react-icons/io5"
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import useAuthentication from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
@@ -74,21 +74,39 @@ export default function Navbar(){
                             <IoChevronForward/>
                         </a> 
                     </li>
-                    <li> 
-                        <Link to="/login" onClick={handleClickLink}>
-                            <FaUserLock/>
-                            Acesso Admin
-                            <IoChevronForward/>
-                        </Link>
-                    </li>
-                    {user && (
-                        <li>
-                            <div className={styles.logout} onClick={handleClickLink}>
-                                <IoLogOutSharp />
-                                <button onClick={logout}>Sair</button>
+                    {!user && (
+                        <li> 
+                            <Link to="/login" onClick={handleClickLink}>
+                                <FaUserLock/>
+                                Acesso Admin
                                 <IoChevronForward/>
-                            </div>
+                            </Link>
                         </li>
+                    )}
+                    {user && (
+                        <>
+                            <li>
+                                <a href="#" onClick={handleClickLink}>
+                                    <IoTerminal />
+                                    Painel
+                                    <IoChevronForward/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onClick={handleClickLink}>
+                                    <IoAddCircle />
+                                    Criar card
+                                    <IoChevronForward/>
+                                </a>
+                            </li>
+                            <li>
+                                <div className={styles.logout} onClick={handleClickLink}>
+                                    <IoLogOutSharp />
+                                    <button onClick={logout}>Sair</button>
+                                    <IoChevronForward/>
+                                </div>
+                            </li>
+                        </>
                     )}
                 </ul>
             </nav>
