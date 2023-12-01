@@ -3,14 +3,13 @@ import {
     signInWithEmailAndPassword,
     signOut
 } from "firebase/auth"
-import { app } from "../firebase/config"
 import { useState, useEffect } from "react"
 
 export default function useAuthentication(){
     const[error, setError] = useState(null)
     const[loading, setLoading] = useState(null)
     const[cancelled, setCancelled] = useState(false)
-    const auth = getAuth(app)
+    const auth = getAuth()
    
     function checkIfIsCancelled(){
         if(cancelled){
@@ -18,22 +17,27 @@ export default function useAuthentication(){
         }
     }
 
-    const login = async(email , senha) =>{
-        
+    const login = async(data) =>{
+
         checkIfIsCancelled()
 
         setLoading(true)
         setError(false)
         try {
-            await signInWithEmailAndPassword(auth, email, senha)
+            await signInWithEmailAndPassword(auth, data.email, data.password)
             setLoading(true)
         } catch (error) {
-            let systemErrorMessage
-            if (error.message) {
-                systemErrorMessage = "Ocorreu um erro tente mais tarde"
+            let systemErrorMessage;
+
+            if(error.message.includes("invalid")){
+                systemErrorMessage = "Usuário não cadastrado ou senha incorreta."
+            } else if(error.message.includes("password")) {
+                systemErrorMessage = "Senha não informada, digite a senha por favor!"
+            } else {
+                systemErrorMessage = "Ocorreu um erro, tente mais tarde."
             }
-        setLoading(false)
-        setError(systemErrorMessage)
+            setLoading(false)
+            setError(systemErrorMessage)
         }
     }
 

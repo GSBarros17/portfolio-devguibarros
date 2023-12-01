@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState, useEffect } from "react"
 import useAuthentication from "../../hooks/useAuthentication"
 import styles from "./Login.module.css"
 
 export default function Login(){
-    
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
-    
-    const {login, error: authError, loading} = useAuthentication()
-    const navigate = useNavigate()
 
-    const handleSubmit = async (e) => {
-        e.preventDefalt()
+    const {login, error: authError, loading} = useAuthentication()
+    
+    const handleSubmit = async (e) =>{
+        e.preventDefault()
 
         setError("")
 
@@ -21,22 +19,23 @@ export default function Login(){
             email,
             password
         }
-
+        
         if (email.trim() === "" || password.trim() === "") {
-            setError("Preencha todos dos campos")
-            return
+            setError("Preencha todos os campos");
+            return;
         }
         const res = await login(user)
         console.log(res)
 
-        navigate("/")
-    }
+    }    
 
     useEffect(() => {
+      
         if(authError){
             setError(authError)
         }
-    },[authError])
+    
+    }, [authError])
     
     return (
         <div className={styles.loginContainer}>

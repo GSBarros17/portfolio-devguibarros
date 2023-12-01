@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5"
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
+import useAuthentication from "../hooks/useAuthentication"
+import { useAuthValue } from "../context/AuthContext"
 import styles from "./Navbar.module.css"
 import ImgLogo from "../img/logo.png"
 import ImgDayNight from "../img/dia-e-noite.png"
@@ -10,6 +12,8 @@ import ImgDayNight from "../img/dia-e-noite.png"
 
 export default function Navbar(){
     
+    const {user} = useAuthValue()
+    const {logout} = useAuthentication()
     const [hideNavbar, setHideNavbar] = useState("false")
 
     const toggleClasse = () => {
@@ -77,6 +81,11 @@ export default function Navbar(){
                             <IoChevronForward/>
                         </Link>
                     </li>
+                    {user && (
+                    <li>
+                        <button onClick={logout}>Sair</button>
+                    </li>
+                )}
                 </ul>
             </nav>
         </div>

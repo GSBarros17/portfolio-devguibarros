@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { ThemeProvider } from './context/themeContext'
 import { AuthProvider } from './context/AuthContext'
@@ -17,7 +17,7 @@ export default function App() {
   
   const [user, setUser] = useState(undefined)
   const {auth} = useAuthentication()
-
+  console.log(user)
   const loadingUser = user === undefined
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function App() {
               <ThemeProvider>
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
+                  <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
                 </Routes>
               </ThemeProvider>
             </div>
