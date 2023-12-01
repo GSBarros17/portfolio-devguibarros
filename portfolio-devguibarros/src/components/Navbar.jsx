@@ -83,7 +83,7 @@ export default function Navbar(){
                     </li>
                     {user && (
                         <li>
-                            <div className={styles.logout}>
+                            <div className={styles.logout} onClick={handleClickLink}>
                                 <IoLogOutSharp />
                                 <button onClick={logout}>Sair</button>
                                 <IoChevronForward/>
