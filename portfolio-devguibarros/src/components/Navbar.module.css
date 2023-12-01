@@ -76,3 +76,20 @@
     align-items: center;
     width: 100%;
 }
+
+.logout{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;     
+}
+
+.logout button{
+    background: none;
+    color: inherit;
+    border: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;    
+}

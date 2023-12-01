@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { IoMenu, IoChevronForward, IoDesktopOutline, } from "react-icons/io5"
+import { IoMenu, IoChevronForward, IoDesktopOutline, IoLogOutSharp } from "react-icons/io5"
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import useAuthentication from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
@@ -82,10 +82,14 @@ export default function Navbar(){
                         </Link>
                     </li>
                     {user && (
-                    <li>
-                        <button onClick={logout}>Sair</button>
-                    </li>
-                )}
+                        <li>
+                            <div className={styles.logout}>
+                                <IoLogOutSharp />
+                                <button onClick={logout}>Sair</button>
+                                <IoChevronForward/>
+                            </div>
+                        </li>
+                    )}
                 </ul>
             </nav>
         </div>
