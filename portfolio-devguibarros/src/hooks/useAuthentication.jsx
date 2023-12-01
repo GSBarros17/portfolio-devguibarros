@@ -7,7 +7,6 @@ import { useState, useEffect } from "react"
 
 export default function useAuthentication(){
     const[error, setError] = useState(null)
-    const[message, setMessage] = useState(null)
     const[loading, setLoading] = useState(null)
     const[cancelled, setCancelled] = useState(false)
     const auth = getAuth()
@@ -26,6 +25,7 @@ export default function useAuthentication(){
         setError(false)
         try {
             await signInWithEmailAndPassword(auth, data.email, data.password)
+            setLoading(true)
         } catch (error) {
             let systemErrorMessage
             if (error.message) {
@@ -50,7 +50,6 @@ export default function useAuthentication(){
         auth,
         error,
         loading,
-        message,
         login,
         logout
     }
