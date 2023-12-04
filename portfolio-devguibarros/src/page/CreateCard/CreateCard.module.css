@@ -6,3 +6,7 @@
 .createCardContainer h1{
     margin: .5em;
 }
+
+.createCardContainer h3{
+    margin-top: 0;
+}

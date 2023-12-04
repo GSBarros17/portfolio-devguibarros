@@ -44,7 +44,7 @@ export default function CreateCard(){
         <div className={styles.createCardContainer}>
             <h1>Criar Card</h1> 
             <form onSubmit={handleSubmit}>
-                <h3>Crie o card do projeto.</h3>
+                <h3>Criar card do projeto.</h3>
                 <label>
                     <span>Titulo:</span>
                     <input 
@@ -85,7 +85,7 @@ export default function CreateCard(){
                     />
                 </label>
                 
-                <button type="submit" className="btnForm">Criar</button>
+                <button type="submit" className="btnForm">Criar Card</button>
             </form>
         </div>
     )
