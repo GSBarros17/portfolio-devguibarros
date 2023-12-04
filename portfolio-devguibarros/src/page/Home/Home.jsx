@@ -14,6 +14,15 @@ export default function Home(){
                         pessoais para desenvolver um portfólio de apresentação. tenho como hobbies estudar novas
                         tecnologias, praticar esportes, escutar musica e viajar.
                     </p>
+                    <h3>Vamos trabalho juntos?</h3>
+                    <div>
+                        <button>
+                            contate-me
+                        </button>
+                        <button>
+                            currículo
+                        </button>
+                    </div>
                 </div>
             </div>
             

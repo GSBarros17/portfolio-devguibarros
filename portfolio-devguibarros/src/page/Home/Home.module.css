@@ -2,3 +2,30 @@
     width: 100%;
     margin-top: 80px;
 }
+
+.aboutMe{
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe img{
+    width: 80%;
+    border-radius: 30px;
+}
+
+.aboutMeInfo h1{
+    text-align: center;
+    margin: .5em 0;
+}
+
+.aboutMeInfo p{
+    margin: 0 1em;
+}
+
+.aboutMeInfo h3{
+    text-align: center;
+    margin: 1em 0;
+}
