@@ -31,7 +31,7 @@ export default function App() {
   }
 
   return (
-    <div className="container">
+    <>
       <AuthProvider value={{user}}>
         <Router>
           <Navbar />
@@ -48,6 +48,6 @@ export default function App() {
             <Footer/>
         </Router>
       </AuthProvider>
-    </div>
+    </>
   );
 }
