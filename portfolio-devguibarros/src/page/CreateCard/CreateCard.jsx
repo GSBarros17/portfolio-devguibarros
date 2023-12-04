@@ -41,7 +41,7 @@ export default function CreateCard(){
    
     
     return (
-        <div className={styles.loginContainer}>
+        <div className={styles.createCardContainer}>
             <h1>Criar Card</h1> 
             <form onSubmit={handleSubmit}>
                 <h3>Crie o card do projeto.</h3>
