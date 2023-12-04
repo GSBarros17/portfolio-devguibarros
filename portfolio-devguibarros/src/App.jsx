@@ -17,7 +17,6 @@ export default function App() {
   
   const [user, setUser] = useState(undefined)
   const {auth} = useAuthentication()
-  console.log(user)
   const loadingUser = user === undefined
 
   useEffect(() => {
@@ -41,6 +40,7 @@ export default function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
                 </Routes>
+                <lightModeToggle />
               </ThemeProvider>
             </div>
             <Footer/>

@@ -24,6 +24,10 @@ export default function Navbar(){
         setHideNavbar(true)
     }
 
+    function lightModeToggle(){
+        
+    }
+
     return(
         <div className={styles.navbarContainer}>
             <div className={styles.headerMenu}>
@@ -33,7 +37,7 @@ export default function Navbar(){
                 <Link to="/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                 </Link>   
-                <button>
+                <button onClick={lightModeToggle}>
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
             </div>

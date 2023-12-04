@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import PropTypes from 'prop-types';
 
 const ThemeContext = createContext()
 
@@ -8,6 +7,7 @@ export const useTheme = () => {
 }
 
 
+// eslint-disable-next-line react/prop-types
 export const ThemeProvider = ({children}) => {
     const [isLightMode, setIsLightMode] = useState(false)
 
@@ -22,6 +22,6 @@ export const ThemeProvider = ({children}) => {
     )
 }
 
-ThemeProvider.propTypes = {
-    children: PropTypes.node.isRequired
+export function useLightMode(){
+    return useContext(ThemeContext)
 }
