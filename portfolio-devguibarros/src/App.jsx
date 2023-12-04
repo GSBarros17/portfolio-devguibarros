@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Home from "./page/Home/Home"
 import Login from "./page/Login/Login"
 import Dashboard from './page/Dashboard/Dashboard'
+import CreateCard from './page/CreateCard/CreateCard'
 
 
 
@@ -41,6 +42,7 @@ export default function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
                   <Route path="/dashboard" element={user ? <Dashboard/> : <Navigate to="/login"/>}/>
+                  <Route path="/createcard" element={user ? <CreateCard/> : <Navigate to="/login"/>}/>
                 </Routes>
                 <lightModeToggle />
               </ThemeProvider>

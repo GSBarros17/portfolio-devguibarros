@@ -97,11 +97,11 @@ export default function Navbar(){
                                 </Link>
                             </li>
                             <li>
-                                <a href="#" onClick={handleClickLink}>
+                                <Link to="/createcard" onClick={handleClickLink}>
                                     <IoAddCircle />
                                     Criar card
                                     <IoChevronForward/>
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <div className={styles.logout} onClick={handleClickLink}>
