@@ -1,5 +1,6 @@
 import DevImg from "../../img/devimg.jpg"
 import styles from "./Home.module.css"
+import { IoDocumentAttach, IoPhonePortraitOutline } from "react-icons/io5";
 
 export default function Home(){
     return(
@@ -15,11 +16,13 @@ export default function Home(){
                         tecnologias, praticar esportes, escutar musica e viajar.
                     </p>
                     <h3>Vamos trabalho juntos?</h3>
-                    <div>
+                    <div className={styles.aboutMeActions}>
                         <button>
+                            <IoPhonePortraitOutline />
                             contate-me
                         </button>
                         <button>
+                            <IoDocumentAttach />
                             currículo
                         </button>
                     </div>
