@@ -1,5 +1,11 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+import { useAuthValue } from "../../context/AuthContext";
+import { useInsertDocument } from "../../hooks/useInsertDocument";
 import styles from "./CreateCard.module.css"
+
+
+
 
 const MAX_FILE_SIZE_KB = 500;
 
@@ -10,7 +16,10 @@ export default function CreateCard(){
     const [urlWeb, setUrlWeb] = useState("")
     const [urlGitHub, setUrlGitHub] = useState("")
     const [formError, setFormError] = useState("")
-    console.log(title, urlImage, urlWeb, urlGitHub, formError)
+    
+    const {insertDocument, response} = useInsertDocument("Cards")
+    const { user } = useAuthValue()
+    const navigate = useNavigate()
     
     const handleFileChange = (e) => {
         const file = e.target.files[0]
@@ -35,7 +44,34 @@ export default function CreateCard(){
 
 
     const handleSubmit = (e) => {
-        e.preventDefault()        
+        e.preventDefault()
+        setFormError("")
+        
+        if(!title || !urlImage || !urlWeb || !urlGitHub){
+            setFormError("Campos não preenchidos")
+            return
+        }
+
+        try {
+            new URL(urlImage)
+        } catch (error) {
+            setFormError("O arquivo precisa ser uma imagem")
+            return
+        }
+
+        if(formError){
+            return
+        }
+
+        insertDocument({
+            title,
+            image: urlImage,
+            urlWeb,
+            urlGitHub,
+            uid: user.uid
+        })
+
+        navigate("/")
     }
 
    
@@ -84,9 +120,11 @@ export default function CreateCard(){
                         onChange={(e) => setUrlGitHub(e.target.value)}
                     />
                 </label>
-                
-                <button type="submit" className="btnForm">Criar Card</button>
+                {!response.loading && <button type="submit" className="btnForm">Criar Card</button>}
+                {response.loading && <button type="submit" className="btnForm">Aguarde...</button>}
             </form>
+            {response.error && <h4>{response.error}</h4>}
+            {formError && <h4>{formError}</h4>}
         </div>
     )
 }
