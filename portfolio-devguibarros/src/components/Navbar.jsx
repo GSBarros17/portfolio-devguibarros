@@ -90,11 +90,11 @@ export default function Navbar(){
                     {user && (
                         <>
                             <li>
-                                <a href="#" onClick={handleClickLink}>
+                                <Link to="/dashboard" onClick={handleClickLink}>
                                     <IoTerminal />
                                     Painel
                                     <IoChevronForward/>
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" onClick={handleClickLink}>

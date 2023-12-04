@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from "./page/Home/Home"
 import Login from "./page/Login/Login"
+import Dashboard from './page/Dashboard/Dashboard'
 
 
 
@@ -39,6 +40,7 @@ export default function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
+                  <Route path="/dashboard" element={user ? <Dashboard/> : <Navigate to="/login"/>}/>
                 </Routes>
                 <lightModeToggle />
               </ThemeProvider>
