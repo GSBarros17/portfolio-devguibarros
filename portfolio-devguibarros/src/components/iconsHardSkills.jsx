@@ -18,32 +18,32 @@ export const iconsHardSkills = [
         name:"CSS3"
     },
     {
-        img: Css,
-        name:"HTML5"
+        img: Js,
+        name:"JAVASCRIPT"
     },
     {
-        img:{Html},
-        name:"HTML5"
+        img: BootStrap,
+        name:"BOOTSTRAP"
     },
     {
-        img:{Html},
-        name:"HTML5"
+        img:React,
+        name:"REACT"
     },
     {
-        img:{Html},
-        name:"HTML5"
+        img:Nodejs,
+        name:"NODEJS"
     },
     {
-        img:{Html},
-        name:"HTML5"
+        img:Vitejs,
+        name:"VITE"
     },
     {
-        img:{Html},
-        name:"HTML5"
+        img:Github,
+        name:"GITHUB"
     },
     {
-        img:{Html},
-        name:"HTML5"
+        img:Figma,
+        name:"FIGMA"
     }
 ]
    
