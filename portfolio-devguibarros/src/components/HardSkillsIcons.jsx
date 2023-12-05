@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types"
+import {PropTypes} from "prop-types"
 import styles from "./HardSkillsIcons.module.css"
 
 export default function HardSkillsIcons({name, img}){

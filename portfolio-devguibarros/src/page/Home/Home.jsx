@@ -1,9 +1,20 @@
 import HardSkillsIcons from "../../components/HardSkillsIcons";
+import { iconsHardSkills } from "../../components/iconsHardSkills";
 import DevImg from "../../img/devimg.jpg"
 import styles from "./Home.module.css"
 import { IoDocumentAttach, IoPhonePortraitOutline } from "react-icons/io5";
 
 export default function Home(){
+    
+    function createdIconsHardSkills({name, img}){
+        return(
+            <HardSkillsIcons
+                img={img}
+                name={name}
+            />
+        )
+    }
+    
     return(
         <div className={styles.homeContainer}>
             <div className={styles.aboutMe}>
@@ -33,10 +44,7 @@ export default function Home(){
             <div className={styles.hardSkills}>
                 <h1>Hard Skill</h1>
                 <div>
-                    <HardSkillsIcons 
-                        img={DevImg}
-                        name="HTML"
-                    />
+                   {iconsHardSkills.map(createdIconsHardSkills)}
                 </div> 
             </div>
         </div>
