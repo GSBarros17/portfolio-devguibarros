@@ -20,9 +20,9 @@ export const useFetchDocuments = (docCollection, uid = null) => {
                 let q
 
                 if(uid){
-                    q = await query(collectionRef, where("uid", "==", uid), orderBy("createdAt", "desc"))
+                    q = await query(collectionRef, where("uid", "==", uid), orderBy("createAt", "desc"))
                 } else {
-                    q = await query(collectionRef, orderBy("createdAt", "desc"))
+                    q = await query(collectionRef, orderBy("createAt", "desc"))
                 }
                 await onSnapshot(q, (querySnapshot) => {
 
