@@ -75,6 +75,7 @@
 
 .hardSkills{
     text-align: center;
+    margin-bottom: 1em;
 }
 
 .iconsHardSkills{
@@ -82,4 +83,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.softSkills{
+    margin: 1em;
+}
+
+.softSkills p{
+    margin: 0em;
 }
