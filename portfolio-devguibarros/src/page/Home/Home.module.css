@@ -11,9 +11,28 @@
     align-items: center;
 }
 
+@keyframes border-radius-animation {
+    0% {
+      border-radius: 22% 78% 28% 72% / 48% 42% 58% 52%;
+    }
+    25% {
+      border-radius: 42% 58% 65% 35% / 57% 57% 43% 43%;
+    }
+    50% {
+      border-radius: 72% 28% 75% 25% / 35% 72% 28% 65%;
+    }
+    75% {
+        border-radius: 42% 58% 65% 35% / 57% 57% 43% 43%;
+      }
+    100% {
+        border-radius: 22% 78% 28% 72% / 48% 42% 58% 52%;
+    }
+  }
+
 .aboutMe img{
     width: 80%;
-    border-radius: 30px;
+    animation: border-radius-animation 5s infinite;
+    border-radius: 22% 78% 28% 72% / 48% 42% 58% 52%;
 }
 
 .aboutMeInfo h1{
