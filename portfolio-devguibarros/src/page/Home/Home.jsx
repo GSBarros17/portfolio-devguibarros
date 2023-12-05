@@ -1,3 +1,4 @@
+import HardSkillsIcons from "../../components/HardSkillsIcons";
 import DevImg from "../../img/devimg.jpg"
 import styles from "./Home.module.css"
 import { IoDocumentAttach, IoPhonePortraitOutline } from "react-icons/io5";
@@ -29,6 +30,15 @@ export default function Home(){
                 </div>
             </div>
             <hr />
+            <div className={styles.hardSkills}>
+                <h1>Hard Skill</h1>
+                <div>
+                    <HardSkillsIcons 
+                        img={DevImg}
+                        name="HTML"
+                    />
+                </div> 
+            </div>
         </div>
     )
 }

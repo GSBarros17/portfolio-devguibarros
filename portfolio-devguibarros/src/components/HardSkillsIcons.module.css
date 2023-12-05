@@ -1,0 +1,4 @@
+.cardHardSkills{
+    display: flex;
+    flex-direction: column;
+}
