@@ -1,0 +1,45 @@
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.projectCard h4{
+    margin-top: 0;
+}
+
+.projectCard img{
+    width: 90%;
+    margin: .5em 0;
+}
+
+.projectCardActions{
+    margin: .5em 0;
+    display: flex;
+}
+
+.projectCardActions a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: .5em 1em;
+    margin: 0 .5em;
+    font-family: 'Russo One', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    background-color: #3e56de;
+    color: #f9f9f9;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 0px 1px #ffffff;
+    cursor: pointer;
+}
+
+.projectCardActions svg{
+    font-size: 1.5em;
+   margin-right: 0.2em;
+}
