@@ -1,19 +1,22 @@
-import { useState } from "react"
-import { useAuthValue } from "../../context/AuthContext"
-import { useFetchDocuments } from "../../hooks/useFetchDocuments";
-import HardSkillsIcons from "../../components/HardSkillsIcons";
-import { iconsHardSkills } from "../../components/iconsHardSkills";
-import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5";
+import { useFetchDocuments } from "../../hooks/useFetchDocuments"
+import HardSkillsIcons from "../../components/HardSkillsIcons"
+import ProjectCard from "../../components/ProjectCard"
+import { iconsHardSkills } from "../../components/iconsHardSkills"
+import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5"
 import DevImg from "../../img/devimg.jpg"
 import styles from "./Home.module.css"
 
 
 
+
 export default function Home(){
     
-    function createdIconsHardSkills({name, img}){
+    const {documents: cards, loading} = useFetchDocuments("Cards")
+
+    function createdIconsHardSkills({id, name, img}){
         return(
             <HardSkillsIcons
+                key={id}
                 img={img}
                 name={name}
             />
@@ -60,9 +63,11 @@ export default function Home(){
             <div className={styles.projects}>
                 <h1>Projetos</h1>
                 <div className={styles.projectsCards}>
-
+                    {loading && <p>carregando...</p>}
+                    {cards && cards.map((card) => (
+                        <ProjectCard key={card.id} card={card}/>
+                    ))}
                 </div>
-
             </div>
         </div>
     )
