@@ -12,4 +12,4 @@ export default function HardSkillsIcons({name, img}){
 HardSkillsIcons.propTypes = {
     name: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired
-  }
+}
