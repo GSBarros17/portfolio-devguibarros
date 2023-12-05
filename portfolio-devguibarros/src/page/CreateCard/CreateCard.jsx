@@ -17,7 +17,7 @@ export default function CreateCard(){
     const [urlGitHub, setUrlGitHub] = useState("")
     const [formError, setFormError] = useState("")
     
-    const {insertDocument, response} = useInsertDocument("Cards")
+    const {insertDocument, response} = useInsertDocument("cards")
     const { user } = useAuthValue()
     const navigate = useNavigate()
     

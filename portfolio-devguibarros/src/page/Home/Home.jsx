@@ -11,7 +11,7 @@ import styles from "./Home.module.css"
 
 export default function Home(){
     
-    const {documents: cards, loading} = useFetchDocuments("Cards")
+    const {documents: cards, loading} = useFetchDocuments("cards")
 
     function createdIconsHardSkills({id, name, img}){
         return(
