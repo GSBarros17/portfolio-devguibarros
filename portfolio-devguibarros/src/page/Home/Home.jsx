@@ -43,10 +43,11 @@ export default function Home(){
             <hr />
             <div className={styles.hardSkills}>
                 <h1>Hard Skill</h1>
-                <div>
+                <div className={styles.iconsHardSkills}>
                    {iconsHardSkills.map(createdIconsHardSkills)}
                 </div> 
             </div>
+            <hr />
         </div>
     )
 }
