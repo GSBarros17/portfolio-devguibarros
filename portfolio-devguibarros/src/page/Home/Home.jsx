@@ -52,6 +52,7 @@ export default function Home(){
                     Facilidade de aprendizagem, boa comunicação, criativo, dinâmico, pró ativo, fácil convívio. Procuro sempre trabalhar da melhor forma possível, objetivando o aprendizado constante de novas ferramentas para construir um conhecimento sólido.
                 </p>
             </div>
+            <hr />
         </div>
     )
 }
