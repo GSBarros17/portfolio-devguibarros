@@ -22,12 +22,12 @@ export const iconsHardSkills = [
         name:"JAVASCRIPT"
     },
     {
-        img: BootStrap,
-        name:"BOOTSTRAP"
-    },
-    {
         img:React,
         name:"REACT"
+    },
+    {
+        img: BootStrap,
+        name:"BOOTSTRAP"
     },
     {
         img:Nodejs,

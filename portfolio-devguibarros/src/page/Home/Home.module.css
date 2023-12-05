@@ -30,7 +30,7 @@
   }
 
 .aboutMe img{
-    width: 80%;
+    width: 70%;
     animation: border-radius-animation 5s infinite;
     border-radius: 22% 78% 28% 72% / 48% 42% 58% 52%;
 }

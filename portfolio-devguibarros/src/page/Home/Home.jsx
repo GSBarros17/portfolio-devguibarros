@@ -53,6 +53,13 @@ export default function Home(){
                 </p>
             </div>
             <hr />
+            <div className={styles.projects}>
+                <h1>Projetos</h1>
+                <div className={styles.projectsCards}>
+
+                </div>
+
+            </div>
         </div>
     )
 }
