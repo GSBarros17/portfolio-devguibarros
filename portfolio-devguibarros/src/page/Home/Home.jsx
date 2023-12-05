@@ -1,8 +1,12 @@
+import { useState } from "react"
+import { useAuthValue } from "../../context/AuthContext"
+import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import HardSkillsIcons from "../../components/HardSkillsIcons";
 import { iconsHardSkills } from "../../components/iconsHardSkills";
+import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5";
 import DevImg from "../../img/devimg.jpg"
 import styles from "./Home.module.css"
-import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5";
+
 
 
 export default function Home(){
