@@ -69,24 +69,24 @@ input:focus{
 
 @keyframes light-hr-animation {
   0%{
-    box-shadow: inset 0px 0px 10px 2px #3EB6DE,0px 0px 20px 2px #3EB6DE;
+    box-shadow: inset 0px 0px 8px 2px #3EB6DE,0px 0px 16px 2px #3EB6DE;
   }
   25%{
-    box-shadow: inset 0px 0px 8px 2px #3EB6DE,0px 0px 16px 2px #3EB6DE;
+    box-shadow: inset 0px 0px 6px 2px #3EB6DE,0px 0px 14px 2px #3EB6DE;
   }
   50%{
-    box-shadow: inset 0px 0px 6px 2px #3EB6DE,0px 0px 10px 2px #3EB6DE;
+    box-shadow: inset 0px 0px 4px 2px #3EB6DE,0px 0px 10px 2px #3EB6DE;
   }
   75%{
-    box-shadow: inset 0px 0px 8px 2px #3EB6DE,0px 0px 16px 2px #3EB6DE;
+    box-shadow: inset 0px 0px 6px 2px #3EB6DE,0px 0px 14px 2px #3EB6DE;
   }
   100%{
-    box-shadow: inset 0px 0px 10px 2px #3EB6DE,0px 0px 20px 2px #3EB6DE;
+    box-shadow: inset 0px 0px 8px 2px #3EB6DE,0px 0px 16px 2px #3EB6DE;
   }
 }
 
 hr{
-  animation: light-hr-animation 3s infinite;
+  animation: light-hr-animation 2s infinite;
   width: 90%;
   border: 2px solid #ffffff;
   border-radius: 25px;
