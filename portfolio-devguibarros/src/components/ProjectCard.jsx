@@ -8,11 +8,11 @@ export default function ProjectCard({card}){
             <h4>{card.title}</h4>
             <img src={card.image} alt={card.title}/>
             <div className={styles.projectCardActions}>
-                <a href={card.urlWeb}>
+                <a className="btn" href={card.urlWeb}>
                     <IoGlobeOutline />
                     Link web
                 </a>
-                <a href={card.urlGitHub}>
+                <a className="btn" href={card.urlGitHub}>
                     <IoLogoGithub />
                     GitHub
                 </a>
