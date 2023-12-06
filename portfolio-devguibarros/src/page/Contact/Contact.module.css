@@ -4,19 +4,21 @@
 
 .sectionContact{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     background-image: linear-gradient(to bottom right, #378fc5, #2c32e0);
     border: 2px solid #f9f9f9;
     padding: 1em;
     border-radius: 20px;
-    width: 60%;
-    margin: 2em auto;
+    margin: 1em auto;
 }
 
 .sectionContact img{
+    width: 50%;
     border-radius: 50%;
     border: 2px solid #f9f9f9;
-    margin-right: 2em;
 }
 
 .sectionTexts{
@@ -47,7 +49,7 @@
 }
 
 .socialMidia a{
-    margin-right: 1em;
+    margin: 0 0.5em;
     color: #f9f9f9;
     font-size: 2.5em;
     transition: .5s;
@@ -55,30 +57,4 @@
 
 .socialMidia a:hover{
     color: #16a6ff;
-}
-
-@media screen and (max-width: 1240px){
-    .about{
-        margin-top: 80px;
-        padding: 0 2em;
-    }
-
-    .sectionContact{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-    }
-
-    .sectionContact img{
-        width: 50%;
-        border-radius: 50%;
-        border: 2px solid #f9f9f9;
-        margin-right: 0;
-    }
-
-    .socialMidia a{
-        margin: 0 0.5em;
-    }
 }
