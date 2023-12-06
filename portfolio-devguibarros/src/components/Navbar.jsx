@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { IoMenu, IoChevronForward, IoDesktopOutline, IoLogOutSharp, IoAddCircle, IoTerminal } from "react-icons/io5"
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import useAuthentication from "../hooks/useAuthentication"
@@ -15,6 +15,8 @@ export default function Navbar(){
     const {user} = useAuthValue()
     const {logout} = useAuthentication()
     const [hideNavbar, setHideNavbar] = useState("false")
+    const location = useLocation()
+    const isHomePage = location.pathname === "/"
 
     const toggleClasse = () => {
         setHideNavbar(!hideNavbar)
@@ -44,11 +46,19 @@ export default function Navbar(){
             <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
                 <ul>
                     <li>
-                        <a href="#sobre-mim" onClick={handleClickLink}>
-                            <FaUserAstronaut />
-                            Sobre mim
-                            <IoChevronForward/>
-                        </a>
+                        {isHomePage ? (
+                            <a href="#sobre-mim" onClick={handleClickLink}>
+                                <FaUserAstronaut />
+                                Sobre mim
+                                <IoChevronForward/>
+                            </a>
+                        ) : (
+                            <Link to="/" onClick={handleClickLink}>
+                                <FaUserAstronaut />
+                                Sobre mim
+                                <IoChevronForward/>
+                            </Link>
+                        )}
                     </li>
                     <li>
                         <a href="#hard-skill" onClick={handleClickLink}>
