@@ -1,7 +1,7 @@
 import styles from "./Contact.module.css"
 import { BsPaperclip , BsGlobe2 , BsGithub , BsWhatsapp , BsLinkedin } from "react-icons/bs"
 import Devimg from "../../img/devimg.jpg"
-import Docdev from "../../docs/curriculoGuilherme.docx"
+import Docdev from "../../doc/guilherme-curriculo.pdf"
 
 export default function About () {
   return (
