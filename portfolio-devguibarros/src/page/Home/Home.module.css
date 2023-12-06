@@ -1,3 +1,7 @@
+#sobre-mim{
+    scroll-margin-top: 100px;
+}
+
 .homeContainer{
     width: 100%;
     margin-top: 80px;
@@ -9,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    scroll-margin-top: 100px;
 }
 
 @keyframes border-radius-animation {
@@ -60,6 +65,7 @@
 }
 
 .hardSkills{
+    scroll-margin-top: 100px;
     text-align: center;
     margin-bottom: 1em;
 }
@@ -72,9 +78,14 @@
 }
 
 .softSkills{
+    scroll-margin-top: 100px;
     margin: 1em;
 }
 
 .softSkills p{
     margin: 0em;
+}
+
+.projects{
+    scroll-margin-top: 100px;
 }

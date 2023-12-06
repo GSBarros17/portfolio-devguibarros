@@ -26,7 +26,7 @@ export default function Home(){
     
     return(
         <div className={styles.homeContainer}>
-            <div className={styles.aboutMe}>
+            <div id="sobre-mim" className={styles.aboutMe}>
                 <img src={DevImg} alt="Foto digital do desenvolvedor"/>
                 <div className={styles.aboutMeInfo}>
                     <h1>Sobre Mim</h1>
@@ -47,22 +47,22 @@ export default function Home(){
                 </div>
             </div>
             <hr />
-            <div className={styles.hardSkills}>
+            <div id="hard-skill" className={styles.hardSkills}>
                 <h1>Hard Skill</h1>
                 <div className={styles.iconsHardSkills}>
                    {iconsHardSkills.map(createdIconsHardSkills)}
                 </div> 
             </div>
             <hr />
-            <div className={styles.softSkills}>
+            <div id="soft-skill" className={styles.softSkills}>
                 <h1>Soft Skills</h1>
                 <p>
                     Facilidade de aprendizagem, boa comunicação, criativo, dinâmico, pró ativo, fácil convívio. Procuro sempre trabalhar da melhor forma possível, objetivando o aprendizado constante de novas ferramentas para construir um conhecimento sólido.
                 </p>
             </div>
             <hr />
-            <div className={styles.projects}>
-                <h1>Projetos</h1>
+            <div id="projects" className={styles.projects}>
+                <h1 >Projetos</h1>
                 <div className={styles.projectsCards}>
                     {loading && <p>carregando...</p>}
                     {cards && cards.map((card) => (

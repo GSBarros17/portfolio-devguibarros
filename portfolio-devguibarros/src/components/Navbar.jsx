@@ -44,28 +44,28 @@ export default function Navbar(){
             <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
                 <ul>
                     <li>
-                        <a href="#" onClick={handleClickLink}>
+                        <a href="#sobre-mim" onClick={handleClickLink}>
                             <FaUserAstronaut />
                             Sobre mim
                             <IoChevronForward/>
                         </a>
                     </li>
                     <li>
-                        <a href="#" onClick={handleClickLink}>
+                        <a href="#hard-skill" onClick={handleClickLink}>
                             <FaGears />
                             Hard Skill
                             <IoChevronForward/>
                         </a> 
                     </li>
                     <li> 
-                        <a href="#" onClick={handleClickLink}>
+                        <a href="#soft-skill" onClick={handleClickLink}>
                             <FaUsers/>
                             Soft Skill
                             <IoChevronForward/>
                         </a>
                     </li>
                     <li>
-                        <a href="#" onClick={handleClickLink}>
+                        <a href="#projects" onClick={handleClickLink}>
                             <IoDesktopOutline/>
                             Projetos
                             <IoChevronForward/>
