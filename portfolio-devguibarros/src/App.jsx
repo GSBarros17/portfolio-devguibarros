@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from "./page/Home/Home"
 import Login from "./page/Login/Login"
+import Contact from "./page/Contact/Contact"
 import Dashboard from './page/Dashboard/Dashboard'
 import CreateCard from './page/CreateCard/CreateCard'
 
@@ -40,6 +41,7 @@ export default function App() {
               <ThemeProvider>
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/contact" element={<Contact />} />
                   <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
                   <Route path="/dashboard" element={user ? <Dashboard/> : <Navigate to="/login"/>}/>
                   <Route path="/createcard" element={user ? <CreateCard/> : <Navigate to="/login"/>}/>
