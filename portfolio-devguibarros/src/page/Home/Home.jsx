@@ -35,14 +35,14 @@ export default function Home(){
                     </p>
                     <h3>Vamos trabalho juntos?</h3>
                     <div className={styles.aboutMeActions}>
-                        <button className="btn">
+                        <a className="btn" href="#">
                             <IoPhonePortraitOutline />
                             contate-me
-                        </button>
-                        <button className="btn">
+                        </a>
+                        <a className="btn" href="#">
                             <IoDocumentAttach />
                             currículo
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
