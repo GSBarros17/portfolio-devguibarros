@@ -3,9 +3,10 @@ import { BsPaperclip , BsGlobe2 , BsGithub , BsWhatsapp , BsLinkedin } from "rea
 import Devimg from "../../img/devimg.jpg"
 import Docdev from "../../doc/guilherme-curriculo.pdf"
 
-export default function About () {
+export default function Contact() {
   return (
-    <div className={styles.about}>
+    <div className={styles.contactContainer}>
+        <h1>Contatos</h1>
       <div className={styles.sectionContact}>
         <img src={Devimg} alt="imagem do desenvolvedor"/>
         <div className={styles.sectionTexts}>
