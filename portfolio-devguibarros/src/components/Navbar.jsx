@@ -72,11 +72,11 @@ export default function Navbar(){
                         </a> 
                     </li>
                     <li> 
-                        <a href="#" onClick={handleClickLink}>
+                        <Link to="/contact" onClick={handleClickLink}>
                             <FaAddressBook/>
                             Contatos
                             <IoChevronForward/>
-                        </a> 
+                        </Link> 
                     </li>
                     {!user && (
                         <li> 
