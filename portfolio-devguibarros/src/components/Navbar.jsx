@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { IoMenu, IoChevronForward, IoDesktopOutline, IoLogOutSharp, IoAddCircle, IoTerminal } from "react-icons/io5"
+import { IoMenu, IoHome, IoChevronForward, IoDesktopOutline, IoLogOutSharp, IoAddCircle, IoTerminal } from "react-icons/io5"
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import useAuthentication from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
@@ -45,66 +45,46 @@ export default function Navbar(){
             </div>
             <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
                 <ul>
-                    <li>
-                        {isHomePage ? (
-                            <a href="#sobre-mim" onClick={handleClickLink}>
-                                <FaUserAstronaut />
-                                Sobre mim
-                                <IoChevronForward/>
-                            </a>
-                        ) : (
+                    {isHomePage ? (
+                        <>
+                            <li>
+                                <a href="#sobre-mim" onClick={handleClickLink}>
+                                    <FaUserAstronaut />
+                                    Sobre mim
+                                    <IoChevronForward/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#hard-skill" onClick={handleClickLink}>
+                                    <FaGears />
+                                    Hard Skill
+                                    <IoChevronForward/>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="#soft-skill" onClick={handleClickLink}>
+                                    <FaUsers/>
+                                    Soft Skill
+                                    <IoChevronForward/>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="#projects" onClick={handleClickLink}>
+                                    <IoDesktopOutline/>
+                                    Projetos
+                                    <IoChevronForward/>
+                                </a> 
+                            </li>
+                        </>
+                    ):(
+                        <li>
                             <Link to="/" onClick={handleClickLink}>
-                                <FaUserAstronaut />
-                                Sobre mim
+                                <IoHome />
+                                Home
                                 <IoChevronForward/>
                             </Link>
-                        )}
-                    </li>
-                    <li>
-                        {isHomePage ? (
-                            <a href="#hard-skill" onClick={handleClickLink}>
-                                <FaGears />
-                                Hard Skill
-                                <IoChevronForward/>
-                            </a> 
-                        ) : (
-                            <Link to="/" onClick={handleClickLink}>
-                                <FaGears />
-                                Hard Skill
-                                <IoChevronForward/>
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {isHomePage ? (
-                            <a href="#soft-skill" onClick={handleClickLink}>
-                                <FaUsers/>
-                                Soft Skill
-                                <IoChevronForward/>
-                            </a> 
-                        ) : (
-                            <Link to="/" onClick={handleClickLink}>
-                                <FaUsers/>
-                                Soft Skill
-                                <IoChevronForward/>
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {isHomePage ? (
-                            <a href="#projects" onClick={handleClickLink}>
-                                <IoDesktopOutline/>
-                                Projetos
-                                <IoChevronForward/>
-                            </a> 
-                        ) : (
-                            <Link to="/" onClick={handleClickLink}>
-                                <IoDesktopOutline/>
-                                Projetos
-                                <IoChevronForward/>
-                            </Link>
-                        )}
-                    </li>
+                        </li>
+                    )}
                     <li> 
                         <Link to="/contact" onClick={handleClickLink}>
                             <FaAddressBook/>
