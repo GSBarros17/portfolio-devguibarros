@@ -1,3 +1,7 @@
+.dashboardContainer{
+    margin-bottom: 1em;
+}
+
 .cardsInfo{
     display: flex;
     justify-content: space-between;

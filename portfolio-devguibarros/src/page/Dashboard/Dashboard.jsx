@@ -17,7 +17,7 @@ export default function Dashboard(){
     }
     
     return (
-        <>
+        <div className={styles.dashboardContainer}>
             <h1>Painel</h1>
             <div className={styles.cardsInfo}>
                 <span>Título</span>
@@ -32,6 +32,6 @@ export default function Dashboard(){
                     </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }
