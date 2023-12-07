@@ -27,7 +27,7 @@ export default function Dashboard(){
                 <div key={card.id} className={styles.cardsDetails}>
                     <h5>{card.title}</h5>
                     <div className={styles.cardsAction}>
-                        <Link className="btn" to={`/edit/${card.id}`}>Editar</Link>
+                        <Link className="btn" to={`/editcard/${card.id}`}>Editar</Link>
                         <button className="btn" onClick={()=> deleteDocument(card.id)}>Excluir</button>
                     </div>
                 </div>

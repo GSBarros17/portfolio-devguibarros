@@ -12,6 +12,7 @@ import Login from "./page/Login/Login"
 import Contact from "./page/Contact/Contact"
 import Dashboard from './page/Dashboard/Dashboard'
 import CreateCard from './page/CreateCard/CreateCard'
+import EditCard from './page/EditCard/EditCard'
 
 
 
@@ -44,6 +45,7 @@ export default function App() {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
                   <Route path="/dashboard" element={user ? <Dashboard/> : <Navigate to="/login"/>}/>
+                  <Route path="/editcard/:id" element={user ? <EditCard/> : <Navigate to="/login"/>}/>
                   <Route path="/createcard" element={user ? <CreateCard/> : <Navigate to="/login"/>}/>
                 </Routes>
                 <lightModeToggle />
