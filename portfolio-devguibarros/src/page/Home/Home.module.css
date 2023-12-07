@@ -55,8 +55,8 @@
     align-items: center;
 }
 
-.aboutMeActions button{
-    width: 124px;
+.aboutMeActions a{
+    width: 100px;
 }
 
 .aboutMeActions svg{
