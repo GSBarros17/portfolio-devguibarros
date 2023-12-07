@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useAuthValue } from "../../context/AuthContext"
 import { useFetchDocuments } from "../../hooks/useFetchDocuments"
+import { useDeleteDocument } from "../../hooks/useDeleteDocuments"
 import styles from "./Dashboard.module.css"
 
 
