@@ -25,10 +25,10 @@ export default function Dashboard(){
             </div>
             {cards && cards.map((card) => 
                 <div key={card.id} className={styles.cardsDetails}>
-                    <p>{card.title}</p>
-                    <div>
-                        <Link to={`/edit/${card.id}`}>Editar</Link>
-                        <button onClick={()=> deleteDocument(card.id)}>Excluir</button>
+                    <h5>{card.title}</h5>
+                    <div className={styles.cardsAction}>
+                        <Link className="btn" to={`/edit/${card.id}`}>Editar</Link>
+                        <button className="btn" onClick={()=> deleteDocument(card.id)}>Excluir</button>
                     </div>
                 </div>
             )}

@@ -1,0 +1,34 @@
+.cardsInfo{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #3EB6DE;
+}
+
+.cardsInfo span{
+    margin: 1em 1em;
+}
+
+.cardsDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 1.5em;
+    border-bottom: 1px solid #3EB6DE;
+}
+
+.cardsAction{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0;
+}
+
+.cardsAction a{
+    margin-bottom: .5em;
+}
+
+.cardsAction button{
+    background-color: #c53737;
+}
