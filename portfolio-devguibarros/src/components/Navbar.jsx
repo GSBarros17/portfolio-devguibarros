@@ -61,25 +61,49 @@ export default function Navbar(){
                         )}
                     </li>
                     <li>
-                        <a href="#hard-skill" onClick={handleClickLink}>
-                            <FaGears />
-                            Hard Skill
-                            <IoChevronForward/>
-                        </a> 
-                    </li>
-                    <li> 
-                        <a href="#soft-skill" onClick={handleClickLink}>
-                            <FaUsers/>
-                            Soft Skill
-                            <IoChevronForward/>
-                        </a>
+                        {isHomePage ? (
+                            <a href="#hard-skill" onClick={handleClickLink}>
+                                <FaGears />
+                                Hard Skill
+                                <IoChevronForward/>
+                            </a> 
+                        ) : (
+                            <Link to="/" onClick={handleClickLink}>
+                                <FaGears />
+                                Hard Skill
+                                <IoChevronForward/>
+                            </Link>
+                        )}
                     </li>
                     <li>
-                        <a href="#projects" onClick={handleClickLink}>
-                            <IoDesktopOutline/>
-                            Projetos
-                            <IoChevronForward/>
-                        </a> 
+                        {isHomePage ? (
+                            <a href="#soft-skill" onClick={handleClickLink}>
+                                <FaUsers/>
+                                Soft Skill
+                                <IoChevronForward/>
+                            </a> 
+                        ) : (
+                            <Link to="/" onClick={handleClickLink}>
+                                <FaUsers/>
+                                Soft Skill
+                                <IoChevronForward/>
+                            </Link>
+                        )}
+                    </li>
+                    <li>
+                        {isHomePage ? (
+                            <a href="#projects" onClick={handleClickLink}>
+                                <IoDesktopOutline/>
+                                Projetos
+                                <IoChevronForward/>
+                            </a> 
+                        ) : (
+                            <Link to="/" onClick={handleClickLink}>
+                                <IoDesktopOutline/>
+                                Projetos
+                                <IoChevronForward/>
+                            </Link>
+                        )}
                     </li>
                     <li> 
                         <Link to="/contact" onClick={handleClickLink}>
