@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react"
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
 import { useFetchDocument } from "../../hooks/useFetchDocument"
 import { useUpdateDocument } from "../../hooks/useUpdateDocument"
-import { BsArrowLeftSquare } from "react-icons/bs"
 import styles from "./EditCard.module.css"
 
 
@@ -97,9 +96,6 @@ export default function EditCard(){
         <div className={styles.editCardContainer}>
             {card && (
                 <>
-                    <Link to="/dashboard">
-                        <BsArrowLeftSquare />
-                    </Link>
                     <h1>Editar Card</h1> 
                     <form onSubmit={handleSubmit}>
                         <h3>Edite o card do projeto.</h3>
