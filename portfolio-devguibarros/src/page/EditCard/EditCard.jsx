@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
 import { useFetchDocument } from "../../hooks/useFetchDocument"
 import { useUpdateDocument } from "../../hooks/useUpdateDocument"
-import styles from "./CreateCard.module.css"
+import styles from "./EditCard.module.css"
 
 
 
@@ -13,7 +13,7 @@ const MAX_FILE_SIZE_KB = 500;
 export default function EditCard(){
     
     const {id} = useParams()
-    const {document: card} = useFetchDocument("cards")
+    const {document: card} = useFetchDocument("cards", id)
 
     const [title, setTitle] = useState("")
     const [urlImage, setUrlImage] = useState("")
@@ -24,11 +24,12 @@ export default function EditCard(){
     useEffect(()=> {
         if(card){
             setTitle(card.title)
-            setUrlImage(card.urlImage)
+            setUrlImage(card.image)
             setUrlWeb(card.urlWeb)
             setUrlGitHub(card.urlGitHub)
         }
     }, [card])
+    
 
     const {updateDocument, response} = useUpdateDocument("cards")
     const { user } = useAuthValue()
@@ -93,9 +94,9 @@ export default function EditCard(){
     
     return (
         <div className={styles.createCardContainer}>
-            <h1>Criar Card</h1> 
+            <h1>Editar Card</h1> 
             <form onSubmit={handleSubmit}>
-                <h3>Criar card do projeto.</h3>
+                <h3>Edite o card do projeto.</h3>
                 <label>
                     <span>Titulo:</span>
                     <input 
@@ -115,8 +116,6 @@ export default function EditCard(){
                         onChange={handleFileChange}
                     />
                 </label>
-                <p className={styles.textPreviewImage}>Pré-vizualização da imagem atual:</p>
-                <img className={styles.previewImage} src={card.image} alt={card.title} />
                 <label>
                     <span>Url Web:</span>
                     <input 
@@ -137,7 +136,7 @@ export default function EditCard(){
                         onChange={(e) => setUrlGitHub(e.target.value)}
                     />
                 </label>
-                {!response.loading && <button type="submit" className="btnForm">Criar Card</button>}
+                {!response.loading && <button type="submit" className="btnForm">Editar Card</button>}
                 {response.loading && <button type="submit" className="btnForm">Aguarde...</button>}
             </form>
             {response.error && <h4>{response.error}</h4>}

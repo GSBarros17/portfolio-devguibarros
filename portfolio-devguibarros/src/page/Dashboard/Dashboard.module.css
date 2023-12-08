@@ -11,7 +11,7 @@
 }
 
 .cardsInfo span{
-    margin: 1em 1em;
+    margin: 0em 1em;
 }
 
 .cardsDetails{
@@ -31,6 +31,7 @@
 
 .cardsAction a{
     margin-bottom: .5em;
+    width: auto;
 }
 
 .cardsAction button{
