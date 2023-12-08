@@ -93,7 +93,7 @@ export default function EditCard(){
    
     
     return (
-        <div className={styles.createCardContainer}>
+        <div className={styles.editCardContainer}>
             <h1>Editar Card</h1> 
             <form onSubmit={handleSubmit}>
                 <h3>Edite o card do projeto.</h3>
