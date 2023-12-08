@@ -58,6 +58,10 @@ input:focus{
   opacity: 1;
 }
 
+input[type="file"]{
+  color: #171717;
+}
+
 .btnForm{
   padding: .5em 1.2em;
   font-family: 'Russo One', sans-serif;
