@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
 import { useFetchDocument } from "../../hooks/useFetchDocument"
 import { useUpdateDocument } from "../../hooks/useUpdateDocument"
+import { BsArrowLeftSquare } from "react-icons/bs"
 import styles from "./EditCard.module.css"
 
 
@@ -94,53 +95,62 @@ export default function EditCard(){
     
     return (
         <div className={styles.editCardContainer}>
-            <h1>Editar Card</h1> 
-            <form onSubmit={handleSubmit}>
-                <h3>Edite o card do projeto.</h3>
-                <label>
-                    <span>Titulo:</span>
-                    <input 
-                        type="text" 
-                        name="titleProject"
-                        placeholder="Digite o nome do projeto"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                    />
-                </label>
-                <label>
-                    <span>Imagem:</span>
-                    <input 
-                        type="file" 
-                        name="fileImage"
-                        accept="image/*"
-                        onChange={handleFileChange}
-                    />
-                </label>
-                <label>
-                    <span>Url Web:</span>
-                    <input 
-                        type="text" 
-                        name="urlLink"
-                        placeholder="Digite a url do link web"
-                        value={urlWeb}
-                        onChange={(e) => setUrlWeb(e.target.value)}
-                    />
-                </label>
-                <label>
-                    <span>Url GitHub:</span>
-                    <input 
-                        type="text" 
-                        name="urlGitHub"
-                        placeholder="Digite o nome do projeto"
-                        value={urlGitHub}
-                        onChange={(e) => setUrlGitHub(e.target.value)}
-                    />
-                </label>
-                {!response.loading && <button type="submit" className="btnForm">Editar Card</button>}
-                {response.loading && <button type="submit" className="btnForm">Aguarde...</button>}
-            </form>
-            {response.error && <h4>{response.error}</h4>}
-            {formError && <h4>{formError}</h4>}
+            {card && (
+                <>
+                    <Link to="/dashboard">
+                        <BsArrowLeftSquare />
+                    </Link>
+                    <h1>Editar Card</h1> 
+                    <form onSubmit={handleSubmit}>
+                        <h3>Edite o card do projeto.</h3>
+                        <label>
+                            <span>Titulo:</span>
+                            <input 
+                                type="text" 
+                                name="titleProject"
+                                placeholder="Digite o nome do projeto"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                            />
+                        </label>
+                        <label>
+                            <span>Imagem:</span>
+                            <input 
+                                type="file" 
+                                name="fileImage"
+                                accept="image/*"
+                                onChange={handleFileChange}
+                            />
+                        </label>
+                        <p className={styles.textPreviewImage}>Pré-vizualização da imagem atual:</p>
+                        <img className={styles.previewImage} src={card.image} alt={card.title} />
+                        <label>
+                            <span>Url Web:</span>
+                            <input 
+                                type="text" 
+                                name="urlLink"
+                                placeholder="Digite a url do link web"
+                                value={urlWeb}
+                                onChange={(e) => setUrlWeb(e.target.value)}
+                            />
+                        </label>
+                        <label>
+                            <span>Url GitHub:</span>
+                            <input 
+                                type="text" 
+                                name="urlGitHub"
+                                placeholder="Digite o nome do projeto"
+                                value={urlGitHub}
+                                onChange={(e) => setUrlGitHub(e.target.value)}
+                            />
+                        </label>
+                        {!response.loading && <button type="submit" className="btnForm">Editar Card</button>}
+                        {response.loading && <button type="submit" className="btnForm">Aguarde...</button>}
+                    </form>
+                    {response.error && <h4>{response.error}</h4>}
+                    {formError && <h4>{formError}</h4>}
+                </>
+            )}
         </div>
     )
 }
