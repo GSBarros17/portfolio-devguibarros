@@ -5,7 +5,7 @@ import { IoLogoGithub, IoGlobeOutline } from "react-icons/io5";
 export default function ProjectCard({card}){
     return(
         <div className={styles.projectCard}>
-            <h4>{card.title}</h4>
+            <h5>{card.title}</h5>
             <img src={card.image} alt={card.title}/>
             <div className={styles.projectCardActions}>
                 <a className="btn" href={card.urlWeb}>
