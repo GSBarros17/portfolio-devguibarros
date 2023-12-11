@@ -32,7 +32,7 @@ export default function Home(){
                     <p>
                         Olá, me chamo Guilherme Soares de Barros, trabalhei mais de 7 anos como bancário porém, encontrei no setor de tecnologia a minha paixão. Atualmente venho trabalhando em projetos pessoais para desenvolver um portfólio de apresentação. tenho como hobbies estudar novas tecnologias, praticar esportes, escutar musica e viajar.
                     </p>
-                    <h3>Vamos trabalho juntos?</h3>
+                    <h4>Vamos trabalho juntos?</h4>
                     <div className={styles.aboutMeActions}>
                         <a className="btn" href="#">
                             <IoPhonePortraitOutline />
