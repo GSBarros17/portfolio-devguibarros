@@ -34,7 +34,7 @@ export default function Home(){
                     </p>
                     <h4>Vamos trabalhar juntos?</h4>
                     <div className={styles.aboutMeActions}>
-                        <a className="btn" href="#">
+                        <a className="btn" href="https://wa.me/5561999767446">
                             <IoPhonePortraitOutline />
                             contate-me
                         </a>
