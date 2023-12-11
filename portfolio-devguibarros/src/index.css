@@ -4,6 +4,9 @@ body{
     background-color: #272727;
     color: #f9f9f9;
     font-family: 'Work Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
