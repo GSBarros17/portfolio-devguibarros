@@ -4,6 +4,7 @@ import ProjectCard from "../../components/ProjectCard"
 import { iconsHardSkills } from "../../components/iconsHardSkills"
 import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5"
 import DevImg from "../../img/devimg.jpg"
+import Docdev from "../../doc/guilherme-curriculo.pdf"
 import styles from "./Home.module.css"
 
 
@@ -38,7 +39,7 @@ export default function Home(){
                             <IoPhonePortraitOutline />
                             contate-me
                         </a>
-                        <a className="btn" href="#">
+                        <a className="btn" href={Docdev}>
                             <IoDocumentAttach />
                             currículo
                         </a>
