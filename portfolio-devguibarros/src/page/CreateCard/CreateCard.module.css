@@ -10,3 +10,9 @@
 .createCardContainer h3{
     margin-top: 0;
 }
+
+.light{
+    background-color: #272727;
+    color: #f9f9f9;
+    box-shadow: none;
+}

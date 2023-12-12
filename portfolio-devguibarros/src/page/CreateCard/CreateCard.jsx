@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
 import { useInsertDocument } from "../../hooks/useInsertDocument";
+import { useTheme } from "../../context/themeContext"
 import styles from "./CreateCard.module.css"
 
 
@@ -16,6 +17,7 @@ export default function CreateCard(){
     const [urlWeb, setUrlWeb] = useState("")
     const [urlGitHub, setUrlGitHub] = useState("")
     const [formError, setFormError] = useState("")
+    const {isLightMode} = useTheme()
     
     const {insertDocument, response} = useInsertDocument("cards")
     const { user } = useAuthValue()
@@ -79,7 +81,7 @@ export default function CreateCard(){
     return (
         <div className={styles.createCardContainer}>
             <h1>Criar Card</h1> 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={isLightMode ? styles.light : ""}>
                 <h3>Criar card do projeto.</h3>
                 <label>
                     <span>Titulo:</span>
