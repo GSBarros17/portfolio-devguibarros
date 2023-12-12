@@ -3,6 +3,7 @@ import { useNavigate, useParams} from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
 import { useFetchDocument } from "../../hooks/useFetchDocument"
 import { useUpdateDocument } from "../../hooks/useUpdateDocument"
+import { useTheme } from "../../context/themeContext"
 import styles from "./EditCard.module.css"
 
 
@@ -20,6 +21,7 @@ export default function EditCard(){
     const [urlWeb, setUrlWeb] = useState("")
     const [urlGitHub, setUrlGitHub] = useState("")
     const [formError, setFormError] = useState("")
+    const {isLightMode} = useTheme()
     
     useEffect(()=> {
         if(card){
@@ -97,7 +99,7 @@ export default function EditCard(){
             {card && (
                 <>
                     <h1>Editar Card</h1> 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className={isLightMode ? styles.light : ""}>
                         <h3>Edite o card do projeto.</h3>
                         <label>
                             <span>Titulo:</span>
