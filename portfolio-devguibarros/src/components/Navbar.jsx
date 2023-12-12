@@ -7,6 +7,7 @@ import { useAuthValue } from "../context/AuthContext"
 import styles from "./Navbar.module.css"
 import ImgLogo from "../img/logo.png"
 import ImgDayNight from "../img/dia-e-noite.png"
+import { useTheme } from "../context/themeContext"
 
 
 
@@ -26,20 +27,18 @@ export default function Navbar(){
         setHideNavbar(true)
     }
 
-    function lightModeToggle(){
-        
-    }
+    const { isLightMode, toggleLightMode } = useTheme();
 
     return(
         <div className={styles.navbarContainer}>
-            <div className={styles.headerMenu}>
+            <div className={`${styles.headerMenu} ${isLightMode ? styles.light : ''}`}>
                 <button onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
                 <Link to="/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                 </Link>   
-                <button onClick={lightModeToggle}>
+                <button onClick={toggleLightMode}>
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
             </div>

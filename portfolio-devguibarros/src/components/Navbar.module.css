@@ -15,6 +15,11 @@
     border-bottom: 2px solid #f9f9f9;
 }
 
+.light{
+    background-color: #3EB6DE;
+    color: #171717;
+}
+
 .headerMenu button{
     font-size: 30px;
     background-color: transparent;
