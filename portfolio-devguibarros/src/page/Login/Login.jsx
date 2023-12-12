@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { useTheme } from "../../context/themeContext"
 import useAuthentication from "../../hooks/useAuthentication"
 import styles from "./Login.module.css"
 
@@ -7,6 +8,7 @@ export default function Login(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
+    const {isLightMode} = useTheme()
 
     const {login, error: authError, loading} = useAuthentication()
     
@@ -40,7 +42,7 @@ export default function Login(){
     return (
         <div className={styles.loginContainer}>
             <h1>LOGIN</h1> 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={isLightMode ? styles.light : ""}>
                 <h3>ÁREA DE LOGIN ADIM</h3>
                 <label>
                     <span>E-mail:</span>
