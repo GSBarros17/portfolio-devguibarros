@@ -3,6 +3,7 @@ import HardSkillsIcons from "../../components/HardSkillsIcons"
 import ProjectCard from "../../components/ProjectCard"
 import { iconsHardSkills } from "../../components/iconsHardSkills"
 import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5"
+import { useTheme } from "../../context/themeContext"
 import DevImg from "../../img/devimg.jpg"
 import Docdev from "../../doc/guilherme-curriculo.pdf"
 import styles from "./Home.module.css"
@@ -13,6 +14,7 @@ import styles from "./Home.module.css"
 export default function Home(){
     
     const {documents: cards, loading} = useFetchDocuments("cards")
+    const {isLightMode} = useTheme()
 
     function createdIconsHardSkills({id, name, img}){
         return(
@@ -46,21 +48,21 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-            <hr />
+            <hr className={isLightMode ? styles.light : ""}/>
             <div id="hard-skill" className={styles.hardSkills}>
                 <h1>Hard Skill</h1>
                 <div className={styles.iconsHardSkills}>
                    {iconsHardSkills.map(createdIconsHardSkills)}
                 </div> 
             </div>
-            <hr />
+            <hr className={isLightMode ? styles.light : ""}/>
             <div id="soft-skill" className={styles.softSkills}>
                 <h1>Soft Skills</h1>
                 <p>
                     Facilidade de aprendizagem, boa comunicação, criativo, dinâmico, pró ativo, fácil convívio. Procuro sempre trabalhar da melhor forma possível, objetivando o aprendizado constante de novas ferramentas para construir um conhecimento sólido.
                 </p>
             </div>
-            <hr />
+            <hr className={isLightMode ? styles.light : ""} />
             <div id="projects" className={styles.projects}>
                 <h1 >Projetos</h1>
                 <div className={styles.projectsCards}>

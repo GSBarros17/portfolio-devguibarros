@@ -88,3 +88,9 @@
 .projects{
     scroll-margin-top: 100px;
 }
+
+.light{
+    animation: none;
+    border: 2px solid #272727;
+    box-shadow: none;
+}

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { AuthProvider } from './context/AuthContext'
+import { useTheme } from './context/themeContext'
 import useAuthentication from './hooks/useAuthentication'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -12,7 +13,7 @@ import Contact from "./page/Contact/Contact"
 import Dashboard from './page/Dashboard/Dashboard'
 import CreateCard from './page/CreateCard/CreateCard'
 import EditCard from './page/EditCard/EditCard'
-import { useTheme } from './context/themeContext'
+
 
 
 
