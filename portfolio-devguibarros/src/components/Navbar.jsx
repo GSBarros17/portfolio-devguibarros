@@ -27,11 +27,11 @@ export default function Navbar(){
         setHideNavbar(true)
     }
 
-    const { isLightMode, toggleLightMode } = useTheme();
+    const { toggleLightMode } = useTheme();
 
     return(
         <div className={styles.navbarContainer}>
-            <div className={`${styles.headerMenu} ${isLightMode ? styles.light : ''}`}>
+            <div className={styles.headerMenu}>
                 <button onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
