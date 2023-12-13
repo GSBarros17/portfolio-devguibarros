@@ -43,7 +43,7 @@ export default function Navbar(){
                 </button>
             </div>
             <nav className={`${styles.navContainer} ${!hideNavbar ? styles.navToggle : ''}`}>
-                <ul>
+                <ul> 
                     {isHomePage ? (
                         <>
                             <li>
