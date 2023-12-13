@@ -15,11 +15,6 @@
     border-bottom: 2px solid #f9f9f9;
 }
 
-.light{
-    background-color: #3EB6DE;
-    color: #171717;
-}
-
 .headerMenu button{
     font-size: 30px;
     background-color: transparent;
@@ -97,4 +92,16 @@
     border: none;
     font-family: 'Russo One', sans-serif;
     font-size: 1em;    
+}
+
+@media screen and (min-width: 600px){
+    .headerMenu{
+        width: 100%;
+        height: 64px;
+        background-color: #171717;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #f9f9f9;
+    }
 }
