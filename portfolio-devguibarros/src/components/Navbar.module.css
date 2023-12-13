@@ -153,8 +153,14 @@
         border-bottom: none;
     }
 
-    .navContainer svg{
+    .svgArrow{
         display: none;
     }
+
+    .navContainer svg{
+        font-size: 1em;
+        margin-right: .5em;
+    }
+    
     
 }

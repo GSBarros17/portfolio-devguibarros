@@ -53,28 +53,28 @@ export default function Navbar(){
                                 <a href="#sobre-mim" onClick={handleClickLink}>
                                     <FaUserAstronaut />
                                     Sobre mim
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#hard-skill" onClick={handleClickLink}>
                                     <FaGears />
                                     Hard Skill
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </a> 
                             </li>
                             <li>
                                 <a href="#soft-skill" onClick={handleClickLink}>
                                     <FaUsers/>
                                     Soft Skill
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </a> 
                             </li>
                             <li>
                                 <a href="#projects" onClick={handleClickLink}>
                                     <IoDesktopOutline/>
                                     Projetos
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </a> 
                             </li>
                         </>
@@ -83,7 +83,7 @@ export default function Navbar(){
                             <Link to="/" onClick={handleClickLink}>
                                 <IoHome />
                                 Home
-                                <IoChevronForward/>
+                                <IoChevronForward className={styles.svgArrow}/>
                             </Link>
                         </li>
                     )}
@@ -91,7 +91,7 @@ export default function Navbar(){
                         <Link to="/contact" onClick={handleClickLink}>
                             <FaAddressBook/>
                             Contatos
-                            <IoChevronForward/>
+                            <IoChevronForward className={styles.svgArrow}/>
                         </Link> 
                     </li>
                     {!user && (
@@ -99,7 +99,7 @@ export default function Navbar(){
                             <Link to="/login" onClick={handleClickLink}>
                                 <FaUserLock/>
                                 Acesso Admin
-                                <IoChevronForward/>
+                                <IoChevronForward className={styles.svgArrow}/>
                             </Link>
                         </li>
                     )}
@@ -109,21 +109,21 @@ export default function Navbar(){
                                 <Link to="/dashboard" onClick={handleClickLink}>
                                     <IoTerminal />
                                     Painel
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/createcard" onClick={handleClickLink}>
                                     <IoAddCircle />
                                     Criar card
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </Link>
                             </li>
                             <li>
                                 <div className={styles.logout} onClick={handleClickLink}>
                                     <IoLogOutSharp />
                                     <button onClick={logout}>Sair</button>
-                                    <IoChevronForward/>
+                                    <IoChevronForward className={styles.svgArrow}/>
                                 </div>
                             </li>
                         </>
