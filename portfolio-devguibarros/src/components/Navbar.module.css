@@ -21,7 +21,7 @@
     border: none;
     color: #f9f9f9;
     padding: 0;
-    margin: 16px;
+    margin: 1em;
 }
 
 .imgButton{
@@ -102,6 +102,13 @@
     .headerMenu{
         height: 64px;
         border-bottom: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .headerMenu button{
+        margin: .5em;
+        padding-top: .5em;
     }
     
     .menuBurger{
@@ -109,7 +116,7 @@
     }
 
     .imgButton{
-        width: 30px;
+        width: 34px;
     }
     
     .imgLogo{
@@ -118,7 +125,7 @@
 
     .imgLogoName{
         display: block;
-        width: 88px;
+        width: 84px;
         position: absolute;
         z-index: 1000;
         top: 0;
