@@ -99,7 +99,7 @@
     padding: 0; 
 }
 
-@media screen and (min-width: 601px){
+@media screen and (min-width: 600px){
     .navContainer{
         width: 40%;
         left: -1024px;
