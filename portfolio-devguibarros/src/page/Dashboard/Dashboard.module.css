@@ -19,8 +19,12 @@
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    margin: 0 1.5em;
+    margin: 0 auto;
     border-bottom: 1px solid #3EB6DE;
+}
+
+.cardsDetails h5{
+    text-align: left;
 }
 
 .cardsAction{
@@ -36,4 +40,28 @@
 
 .cardsAction button{
     background-color: #c53737;
+}
+
+@media screen and (min-width: 600px){
+    .cardsInfo{
+        width: 70%;
+    }
+    
+    .cardsDetails{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .dashboardContainer h1{
+        margin-top: 1em;
+    }
+    
+    .cardsInfo{
+        width: 50%;
+    }
+    
+    .cardsDetails{
+        width: 50%;
+    }
 }
