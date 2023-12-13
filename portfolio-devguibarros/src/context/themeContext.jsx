@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext()
 
@@ -9,11 +9,17 @@ export const useTheme = () => {
 
 // eslint-disable-next-line react/prop-types
 export const ThemeProvider = ({children}) => {
-    const [isLightMode, setIsLightMode] = useState(false)
+    const storedTheme = localStorage.getItem("theme")
+    const [isLightMode, setIsLightMode] = useState(storedTheme === "light" ? true : false)
+   
 
     const toggleLightMode = () =>{
         setIsLightMode((prevMode) => !prevMode)
     }
+
+    useEffect(() => {
+        localStorage.setItem("theme", isLightMode ? "light" : "dark")
+    }, [isLightMode])
 
     return (
         <ThemeContext.Provider value={{ isLightMode, toggleLightMode}}>
