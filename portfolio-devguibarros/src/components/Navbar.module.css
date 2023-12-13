@@ -151,6 +151,14 @@
     .navContainer li{
         padding: 0.5em;
         border-bottom: none;
+        transition: .5s;
+    }
+
+    .navContainer li:hover{
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ffffff;
+        box-shadow: inset 0px -15px 8px -10px #3EB6DE;
+        transition: .2s;
     }
 
     .svgArrow{
