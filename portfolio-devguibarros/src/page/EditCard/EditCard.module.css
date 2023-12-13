@@ -17,3 +17,19 @@
     color: #f9f9f9;
     box-shadow: none;
 }
+
+@media screen and (min-width: 600px){
+    .editCardContainer form{
+        width: 50%;
+   }
+}
+
+@media screen and (min-width: 1024px){
+    .editCardContainer h1{
+        margin-top: 1em;
+    }
+    
+    .editCardContainer form{
+        width: 40%;
+   }
+}
