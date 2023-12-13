@@ -32,7 +32,7 @@ export default function Navbar(){
     return(
         <div className={styles.navbarContainer}>
             <div className={styles.headerMenu}>
-                <button onClick={toggleClasse}>
+                <button className={styles.menuBurger} onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
                 <Link to="/" onClick={handleClickLink}>
