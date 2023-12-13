@@ -4,10 +4,12 @@ import { IoMenu, IoHome, IoChevronForward, IoDesktopOutline, IoLogOutSharp, IoAd
 import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import useAuthentication from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
+import { useTheme } from "../context/themeContext"
 import styles from "./Navbar.module.css"
 import ImgLogo from "../img/logo.png"
+import ImgLogoName from "../img/logo-nome.png"
 import ImgDayNight from "../img/dia-e-noite.png"
-import { useTheme } from "../context/themeContext"
+
 
 
 
@@ -37,6 +39,7 @@ export default function Navbar(){
                 </button>
                 <Link to="/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
+                    <img className={styles.imgLogoName} src={ImgLogoName} alt="Logo"/>
                 </Link>   
                 <button onClick={toggleLightMode}>
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
