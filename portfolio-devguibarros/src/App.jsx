@@ -42,9 +42,9 @@ export default function App() {
             <Navbar />
               <div className={`${"container"} ${isLightMode ? "light" : ""}`}>
                   <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/portfolio-devguibarros/" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/login" element={!user ? <Login/> : <Navigate to="/"/>}/>
+                    <Route path="/login" element={!user ? <Login/> : <Navigate to="/portfolio-devguibarros/"/>}/>
                     <Route path="/dashboard" element={user ? <Dashboard/> : <Navigate to="/login"/>}/>
                     <Route path="/editcard/:id" element={user ? <EditCard/> : <Navigate to="/login"/>}/>
                     <Route path="/createcard" element={user ? <CreateCard/> : <Navigate to="/login"/>}/>

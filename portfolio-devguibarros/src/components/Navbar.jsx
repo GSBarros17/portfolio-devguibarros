@@ -37,7 +37,7 @@ export default function Navbar(){
                 <button className={styles.menuBurger} onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
-                <Link to="/" onClick={handleClickLink}>
+                <Link to="/portfolio-devguibarros/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                     <img className={styles.imgLogoName} src={ImgLogoName} alt="Logo"/>
                 </Link>   
@@ -66,7 +66,7 @@ export default function Navbar(){
                         </>
                     ):(
                         <li>
-                            <Link to="/" onClick={handleClickLink}>
+                            <Link to="/portfolio-devguibarros/" onClick={handleClickLink}>
                                 <IoHome />
                                 Home
                                 <IoChevronForward className={styles.svgArrow}/>
