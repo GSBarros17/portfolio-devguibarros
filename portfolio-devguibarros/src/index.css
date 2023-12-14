@@ -104,7 +104,7 @@ hr{
 }
 
 .btn{
-  display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -121,4 +121,9 @@ hr{
     border: none;
     box-shadow: 0px 0px 0px 1px #ffffff;
     cursor: pointer;
+    transition: 1s;
+}
+
+.btn:hover{
+  background-color: #093690;
 }
