@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { IoMenu, IoHome, IoChevronForward, IoDesktopOutline, IoLogOutSharp, IoAddCircle, IoTerminal } from "react-icons/io5"
-import { FaGears, FaUsers, FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
+import { FaAddressBook, FaUserAstronaut, FaUserLock } from "react-icons/fa6"
 import useAuthentication from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
 import { useTheme } from "../context/themeContext"
@@ -55,20 +55,6 @@ export default function Navbar(){
                                     Sobre mim
                                     <IoChevronForward className={styles.svgArrow}/>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#hard-skill" onClick={handleClickLink}>
-                                    <FaGears />
-                                    Hard Skill
-                                    <IoChevronForward className={styles.svgArrow}/>
-                                </a> 
-                            </li>
-                            <li>
-                                <a href="#soft-skill" onClick={handleClickLink}>
-                                    <FaUsers/>
-                                    Soft Skill
-                                    <IoChevronForward className={styles.svgArrow}/>
-                                </a> 
                             </li>
                             <li>
                                 <a href="#projects" onClick={handleClickLink}>
