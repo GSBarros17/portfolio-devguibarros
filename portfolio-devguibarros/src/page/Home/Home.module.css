@@ -4,6 +4,7 @@
 
 .homeContainer{
     width: 100%;
+    margin: 1em auto;
 }
 
 .aboutMe{
@@ -33,7 +34,10 @@
     }
   }
 
-.aboutMe img{
+  .aboutMeImg{
+    text-align: center;
+}
+.aboutMeImg img{
     width: 70%;
     animation: border-radius-animation 5s infinite;
     border-radius: 22% 78% 28% 72% / 48% 42% 58% 52%;
@@ -94,4 +98,63 @@
     animation: none;
     border: 2px solid #272727;
     box-shadow: none;
+}
+
+@media screen and (min-width: 600px){
+    .homeContainer{
+        width: 80%;
+    }
+
+    .aboutMe img{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .homeContainer{
+        width: 100%;
+    }
+
+    .aboutMe{
+        margin-top: 3em;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .aboutMeImg{
+        width: 40%;
+        text-align: center;
+    }
+
+    .aboutMe img{
+        width: 70%;
+        margin:  0 auto;
+    }
+
+    .aboutMeInfo{
+        padding-bottom: 6em;
+        margin-left: 1em;
+        width: 50%;
+        border-right:3px solid #ffffff;
+        border-radius: 20px;
+        border-bottom:4px solid #ffffff;
+        box-shadow: inset -22px -22px 13px -17px #2ad3d3;
+    }
+
+    .aboutMeInfo p{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aboutMeInfo h4{
+        margin: 2em 0;
+    }
+    
+    .aboutMeActions{
+        margin-top: 1em;
+        margin-bottom: .5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

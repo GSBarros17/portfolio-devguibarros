@@ -29,7 +29,9 @@ export default function Home(){
     return(
         <div className={styles.homeContainer}>
             <div id="sobre-mim" className={styles.aboutMe}>
-                <img src={DevImg} alt="Foto digital do desenvolvedor"/>
+                <div className={styles.aboutMeImg}>
+                    <img src={DevImg} alt="Foto digital do desenvolvedor"/>
+                </div>
                 <div className={styles.aboutMeInfo}>
                     <h1>Sobre Mim</h1>
                     <p>
