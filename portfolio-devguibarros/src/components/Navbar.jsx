@@ -19,7 +19,7 @@ export default function Navbar(){
     const {logout} = useAuthentication()
     const [hideNavbar, setHideNavbar] = useState("false")
     const location = useLocation()
-    const isHomePage = location.pathname === "/"
+    const isHomePage = location.pathname === "/portfolio-devguibarros/"
 
     const toggleClasse = () => {
         setHideNavbar(!hideNavbar)
