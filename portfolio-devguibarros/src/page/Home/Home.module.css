@@ -62,6 +62,7 @@
 
 .aboutMeActions a{
     width: 104px;
+    margin: 0 1em;
 }
 
 .aboutMeActions svg{
