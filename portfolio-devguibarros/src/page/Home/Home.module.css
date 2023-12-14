@@ -34,9 +34,10 @@
     }
   }
 
-  .aboutMeImg{
+.aboutMeImg{
     text-align: center;
 }
+
 .aboutMeImg img{
     width: 70%;
     animation: border-radius-animation 5s infinite;
@@ -118,7 +119,6 @@
     .aboutMe{
         margin-top: 3em;
         flex-direction: row-reverse;
-        justify-content: space-around;
     }
 
     .aboutMeImg{
@@ -135,10 +135,6 @@
         padding-bottom: 6em;
         margin-left: 1em;
         width: 50%;
-        border-right:3px solid #ffffff;
-        border-radius: 20px;
-        border-bottom:4px solid #ffffff;
-        box-shadow: inset -22px -22px 13px -17px #2ad3d3;
     }
 
     .aboutMeInfo p{
@@ -149,12 +145,31 @@
     .aboutMeInfo h4{
         margin: 2em 0;
     }
-    
-    .aboutMeActions{
-        margin-top: 1em;
-        margin-bottom: .5em;
+
+    .lineLightHome{
+        display: none;
+    }
+
+    .skillsComponent{
         display: flex;
         justify-content: center;
-        align-items: center;
+    }
+
+    .hardSkills{
+        width: 40%;
+        margin: 1em;
+    }
+
+    .softSkills{
+        width: 40%;
+    }
+
+    .softSkills p{
+        padding: 0 1em;
+    }
+
+    .projectsCards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
