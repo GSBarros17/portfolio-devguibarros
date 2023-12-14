@@ -106,9 +106,6 @@
         width: 80%;
     }
 
-    .aboutMe img{
-        width: 50%;
-    }
 }
 
 @media screen and (min-width: 1024px){
@@ -122,23 +119,24 @@
     }
 
     .aboutMeImg{
-        width: 40%;
+        width: 50%;
         text-align: center;
+        margin: 0 1em;
     }
 
     .aboutMe img{
-        width: 70%;
+        width: 60%;
         margin:  0 auto;
     }
 
     .aboutMeInfo{
-        padding-bottom: 6em;
-        margin-left: 1em;
         width: 50%;
+        margin: 0 1em;
     }
 
     .aboutMeInfo p{
         width: 90%;
+        text-align: justify;
         margin: 0 auto;
     }
 
@@ -156,16 +154,23 @@
     }
 
     .hardSkills{
-        width: 40%;
-        margin: 1em;
+        width: 50%;
+        margin: 0 1em;
     }
 
     .softSkills{
-        width: 40%;
+        width: 50%;
+        margin: 0 1em;
     }
 
     .softSkills p{
         padding: 0 1em;
+        width: 90%;
+        text-align: justify;
+    }
+
+    .projects{
+        margin: 0 1em;
     }
 
     .projectsCards{
