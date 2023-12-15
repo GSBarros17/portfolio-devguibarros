@@ -116,6 +116,7 @@
 
     .aboutMe{
         margin-top: 3em;
+        margin-bottom: 2em;
         flex-direction: row-reverse;
     }
 
@@ -152,6 +153,7 @@
     .skillsComponent{
         display: flex;
         justify-content: center;
+        margin-bottom: 2em;
     }
 
     .hardSkills{
