@@ -1,7 +1,7 @@
 import styles from "./Contact.module.css"
-import { BsPaperclip , BsGlobe2 , BsGithub , BsWhatsapp , BsLinkedin } from "react-icons/bs"
+import { BsGithub , BsWhatsapp , BsLinkedin } from "react-icons/bs"
+import { FaInstagram} from "react-icons/fa6";
 import Devimg from "../../img/devimg.jpg"
-import Docdev from "../../doc/guilherme-curriculo.pdf"
 
 export default function Contact() {
   return (
@@ -15,8 +15,7 @@ export default function Contact() {
             <h3>Caso você tenha interesse no meu trabalho,
             entre em contato comigo pelas minhas redes sociais:</h3>
             <div className={styles.socialMidia}>
-                <a aria-label="currículo do desenvolvedor" href={Docdev}><BsPaperclip/></a>
-                <a aria-label="link do site do desenvolvedor" href="https://www.devguilhermebarros.com.br"><BsGlobe2/></a>
+            <a aria-label="icone instagram" href="https://www.instagram.com/devgbarros/"><FaInstagram/></a>
                 <a aria-label="link para whatsapp" href="https://wa.me/5561999767446"><BsWhatsapp/></a>
                 <a aria-label="link do github do desenvolvedor" href="https://github.com/GSBarros17"><BsGithub/></a>
                 <a aria-label="link do linkedin desenvolvedor" href="https://www.linkedin.com/in/guilherme-barros-b05632294"><BsLinkedin/></a>
