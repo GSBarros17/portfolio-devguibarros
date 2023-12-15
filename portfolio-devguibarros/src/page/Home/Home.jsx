@@ -35,7 +35,7 @@ export default function Home(){
                 <div className={styles.aboutMeInfo}>
                     <h1>Sobre Mim</h1>
                     <p>
-                        Olá, me chamo Guilherme Soares de Barros, trabalhei mais de 7 anos como bancário porém, encontrei no setor de tecnologia a minha paixão. Atualmente venho trabalhando em projetos pessoais para desenvolver um conhecimento relevante sobre as técnologias apresentadas neste portfólio. Tenho como passatempo aprender sobre novas tecnologias por meio de vídeos, ler livros, assistir séries e filme, praticar esportes, escutar musica e viajar. Meu objetivo neste novo desafio é me tornar um excelente programador!
+                        Olá, me chamo Guilherme Soares de Barros, trabalhei mais de 7 anos como bancário, porém encontrei no setor de tecnologia a minha paixão. Atualmente venho trabalhando em projetos pessoais para desenvolver um conhecimento relevante sobre as técnologias apresentadas neste portfólio. Tenho como passatempo aprender sobre novas tecnologias por meio de vídeos, ler livros, assistir séries e filmes, praticar esportes, escutar musica e viajar. Meu objetivo neste novo desafio é me tornar um excelente programador!
                     </p>
                     <h4>Vamos trabalhar juntos?</h4>
                     <div className={styles.aboutMeActions}>
