@@ -34,14 +34,14 @@ export default function Navbar(){
     return(
         <div className={styles.navbarContainer}>
             <div className={styles.headerMenu}>
-                <button className={styles.menuBurger} onClick={toggleClasse}>
+                <button aria-label="botão menu" className={styles.menuBurger} onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
                 <Link to="/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                     <img className={styles.imgLogoName} src={ImgLogoName} alt="Logo"/>
                 </Link>   
-                <button onClick={toggleLightMode}>
+                <button aria-label="botão de tema" onClick={toggleLightMode}>
                     <img className={styles.imgButton} src={ImgDayNight} alt=""/>
                 </button>
             </div>
