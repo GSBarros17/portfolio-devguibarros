@@ -1,7 +1,7 @@
 import styles from "./Contact.module.css"
 import { BsGithub , BsWhatsapp , BsLinkedin } from "react-icons/bs"
 import { FaInstagram} from "react-icons/fa6";
-import Devimg from "../../img/devimg.jpg"
+import Devimg from "../../img/devimg.webp"
 
 export default function Contact() {
   return (

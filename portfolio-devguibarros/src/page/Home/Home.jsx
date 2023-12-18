@@ -4,7 +4,7 @@ import ProjectCard from "../../components/ProjectCard"
 import { iconsHardSkills } from "../../components/iconsHardSkills"
 import { IoDocumentAttach, IoPhonePortraitOutline} from "react-icons/io5"
 import { useTheme } from "../../context/themeContext"
-import DevImg from "../../img/devimg.jpg"
+import DevImg from "../../img/devimg.webp"
 import Docdev from "../../doc/guilherme-curriculo.pdf"
 import styles from "./Home.module.css"
 

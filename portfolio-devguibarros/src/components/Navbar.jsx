@@ -6,9 +6,9 @@ import useAuthentication from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
 import { useTheme } from "../context/themeContext"
 import styles from "./Navbar.module.css"
-import ImgLogo from "../img/logo.png"
-import ImgLogoName from "../img/logo-nome.png"
-import ImgDayNight from "../img/dia-e-noite.png"
+import ImgLogo from "../img/logo.webp"
+import ImgLogoName from "../img/logo-nome.webp"
+import ImgDayNight from "../img/dia-e-noite.webp"
 
 
 

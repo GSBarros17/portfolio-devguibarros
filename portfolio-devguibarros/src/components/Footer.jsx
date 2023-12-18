@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css"
 import { FaWhatsapp, FaInstagram, FaLinkedin} from "react-icons/fa6";
-import ImgLogo from "../img/logo-nomelateral.png"
+import ImgLogo from "../img/logo-nomelateral.webp"
 
 export default function Footer(){
     const anoAtual = new Date().getFullYear()
