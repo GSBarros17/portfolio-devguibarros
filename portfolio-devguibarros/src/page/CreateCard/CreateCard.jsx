@@ -73,7 +73,7 @@ export default function CreateCard(){
             uid: user.uid
         })
 
-        navigate("/portfolio-devguibarros/")
+        navigate("/")
     }
 
    

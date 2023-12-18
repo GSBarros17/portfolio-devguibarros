@@ -19,7 +19,7 @@ export default function Navbar(){
     const {logout} = useAuthentication()
     const [hideNavbar, setHideNavbar] = useState("false")
     const location = useLocation()
-    const isHomePage = location.pathname === "/portfolio-devguibarros/"
+    const isHomePage = location.pathname === "/"
 
     const toggleClasse = () => {
         setHideNavbar(!hideNavbar)
@@ -37,7 +37,7 @@ export default function Navbar(){
                 <button className={styles.menuBurger} onClick={toggleClasse}>
                     <IoMenu/>
                 </button>
-                <Link to="/portfolio-devguibarros/" onClick={handleClickLink}>
+                <Link to="/" onClick={handleClickLink}>
                     <img className={styles.imgLogo} src={ImgLogo} alt="Logo"/>
                     <img className={styles.imgLogoName} src={ImgLogoName} alt="Logo"/>
                 </Link>   
@@ -66,7 +66,7 @@ export default function Navbar(){
                         </>
                     ):(
                         <li>
-                            <Link to="/portfolio-devguibarros/" onClick={handleClickLink}>
+                            <Link to="/" onClick={handleClickLink}>
                                 <IoHome />
                                 Home
                                 <IoChevronForward className={styles.svgArrow}/>
