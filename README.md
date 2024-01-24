@@ -23,6 +23,15 @@ Demostração do site.
 
 https://github.com/GSBarros17/portfolio-devguibarros/assets/108480293/9883732c-fa93-4e07-aff3-94476556c325
 
+## Funcionalidades
+
+- Modo escuro e claro
+- Login
+- Criar projeto
+- Editar projeto
+- Excluir projeto
+
+
 ## Stack utilizada
 
 **Front-end:**
